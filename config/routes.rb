@@ -5,6 +5,22 @@ Rails.application.routes.draw do
   resources :pages
 
   root 'pages#index'
+
+  get 'about' => 'pages#about_us'
+  get 'child_care' => 'pages#child_care'
+  get 'contact' => 'pages#contact'
+  get 'free_trial' => 'pages#free_trial'
+  get 'staff' => 'pages#staff'
+
+  get 'crossfit_pricing' => 'cross_fit_classes#cf_pricing'
+  get 'crossfit_schedule' => 'cross_fit_classes#cf_schedule'
+  get 'crossfit' => 'cross_fit_classes#wicf'
+  get 'wod' => 'cross_fit_classes#wod'
+
+  get 'group_classes_pricing' => 'group_classes#gc_pricing'
+  get 'group_classes_schedule' => 'group_classes#gc_schedule'
+  get 'group_classes' => 'group_classes#group_classes'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

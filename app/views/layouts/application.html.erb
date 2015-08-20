@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag(source='favicon.ico') %>
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : " | CrossFit Interchange" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,8 +14,121 @@
   </head>
 
   <body>
+  <!-- Large screen nav bar -->
+   <div class="show-for-medium-up">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+          	<%= link_to image_tag("CFI_logo.png", :size => '40x45', :alt => 'CFI Logo'), root_path %>
+          </h1>
+        </li>
+      </ul>
 
-    <%= yield %>
+      <section class="top-bar-section">
+        <ul class="left">
 
+          <li class="has-dropdown">
+            <a href="#">CrossFit</a>
+              <ul class="dropdown">
+                <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
+                <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
+                <li><%= link_to 'Pricing', crossfit_pricing_path %></li>
+                <li><%= link_to 'WOD', wod_path %></li>
+              </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Group Classes</a>
+              <ul class="dropdown">
+                <li><%= link_to 'Group Classes', group_classes_path %></li>
+                <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
+                <li><%= link_to 'Class Pricing', group_classes_pricing_path %></li>
+              </ul>
+          </li>
+          <li><%= link_to 'Child Care', child_care_path %></li>
+          <li class="has-dropdown">
+          <a href="#">About</a>
+          <ul class="dropdown">
+            <li><%= link_to 'About Us', about_path %></li>
+            <li><%= link_to 'Staff', staff_path %></li>
+            <li><%= link_to 'Contact Us', contact_path %></li>
+          </ul>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="right">
+          <li><%= link_to 'Free Trial', free_trial_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+        </ul>
+      </section>
+    </nav>
+    </div>
+  <!-- Mobile/Small nav -->
+    <div class="show-for-small-only">
+      <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+          <nav class="tab-bar">
+            <section class="middle tab-bar-section">
+              <h1 class="title"><%= link_to 'CrossFit Interchange', root_path %></h1>
+            </section>
+
+            <section class="right-small">
+              <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+          </nav>
+
+          <aside class="right-off-canvas-menu">
+            <ul class="off-canvas-list">
+              <li><label>CrossFit</label></li>
+                <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
+                <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
+                <li><%= link_to 'Pricing', crossfit_pricing_path %></li>
+                <li><%= link_to 'WOD', wod_path %></li>
+              <li><label>Group Classes</label></li>
+                <li><%= link_to 'Group Classes', group_classes_path %></li>
+                <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
+                <li><%= link_to 'Class Pricing', group_classes_pricing_path %></li>
+              <li><label>About</label></li>
+                <li><%= link_to 'About Us', about_path %></li>
+                <li><%= link_to 'Staff', staff_path %></li>
+                <li><%= link_to 'Contact Us', contact_path %></li>
+              <li><label></label></li>
+                <li><%= link_to 'Child Care', child_care_path %></li>
+                <li><%= link_to 'Free Trial', free_trial_path %></li>
+                <li><%= link_to 'Home', root_path %><li>
+            </ul>
+
+          </aside>
+
+          <section class="main-section">
+             <p class="notice"><%= notice %></p>
+             <p class="alert"><%= alert %></p>
+            <%= yield %>
+          </section>
+
+        <a class="exit-off-canvas"></a>
+
+        </div>
+      </div>
+    </div>
+      <!-- Alerts/Notices --><div class="show-for-medium-up">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+      <%= yield %>
+      </div>
+    <footer><!-- For computer screen only, mobile footer wrapped in...-->
+      <div class="footer" class="hide-for-small-only" class="row">
+        <p>
+          <div class="small-6 large-6 columns" class="left">
+            <span class="hide-for-small-only">707-266-9066</span>
+            <a href="mailto:info@CrossFitInterchange.com">Info@CrossFitInterchange.com</a><br>
+            <a target="_blank" href="https://www.google.com/maps/place/324+Campus+Ln,+Fairfield,+CA+94534/@38.2311641,-122.125176,17z/data=!3m1!4b1!4m2!3m1!1s0x808513cdb30cc299:0x9be60b71d653c80a">324 Campus Lane Suite E, Fairfield, CA</a>
+            </div>
+        </p>
+        <div class="small-6 large-6 columns" class="right">
+          <a href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63" target="_blank" title="CrossFit Journal: The Performance-Based Lifestyle Resource"><img src="http://journal.crossfit.com/templates/images/white-125x63.png" width="125px" height="63px" alt="CrossFit Journal: The Performance-Based Lifestyle Resource" /></a> 
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
