@@ -1,0 +1,2 @@
+class CrossFitClassesController < ApplicationController
+end
