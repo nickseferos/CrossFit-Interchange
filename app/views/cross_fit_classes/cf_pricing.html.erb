@@ -1,0 +1,98 @@
+<!-- Hero -->
+<section class="hero_price">
+  <!-- <div class="row price_hero_text">
+    <div class="small-6 large-centered columns"><h1 class="text-center">CrossFit Pricing</h1></div>
+  </div> -->
+</section>
+
+
+<!-- Pricing table, normal situation -->
+  <div class="price_header">
+    <h1 class="text-center">CrossFit Pricing</h1>
+  </div>
+  <div class="row"> 
+  <div class="medium-4 columns">
+     <ul class="pricing-table">
+       <li class="title">One Year Paid Monthly</li>
+       <li class="price">$120
+         <br><span>per month</span>
+         <hr>
+       </li>
+       <!-- <li class="bullet-item">Unlimited<span><br>classes per week</span></li> -->
+       <li class="cta-button"><%= button_to'Click for a Free Trial!', free_trial_path, :class => "button"  %></li>
+     </ul>
+   </div>
+   <div class="medium-4 columns">
+     <ul class="pricing-table recommended">
+         <li class="best"><span>Recommended</span></li>
+         <li class="title">One Year of Classes Paid Up Front</li>
+         <li class="price">$1,290
+         <br><span>per year</span>
+         <hr>
+         </li>
+         <!-- <li class="bullet-item">10<span> classes per week</span></li> -->
+         <li class="bullet-item">$150 savings!</li>
+         <li class="cta-button"><%= button_to'Click for a Free Trial!', free_trial_path, :class => "button"  %></li>
+      </ul>
+   </div>
+   <div class="medium-4 columns">
+      <ul class="pricing-table">
+        <li class="title">Month to Month</li>
+        <li class="price">$140
+          <br><span>per month</span>
+          <hr>
+        </li>
+        <!-- <li class="bullet-item">10<span> classes per week</span></li> -->
+        <li class="cta-button"><%= button_to'Click for a Free Trial!', free_trial_path, :class => "button"  %></li>
+      </ul>
+    </div>
+  </div>
+<div class="price_footer">
+<p class="text-center">
+<a href="#" data-reveal-id="firstModal">Military &amp; First Responders, Students, Seniors &amp; Families</a>
+<br><br>
+<%= link_to 'Punch Passes & Drop In', group_classes_pricing_path %>
+</p>
+</div>
+
+<!-- Special Modal -->
+  <div id="firstModal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
+    <div class="price_modal">
+      <h3 class="text-center">Military &amp; First Responder, Students, Seniors &amp; Famlies Pricing</h3>
+    </div>
+    <div class="row"> 
+    <div class="medium-4 columns">
+       <ul class="pricing-table">
+         <li class="title">One Year Paid Monthly</li>
+         <li class="bullet-item">$100<span><br> per month military &amp; first responders</span></li>
+         <li class="bullet-item">$100<span><br> per month family</span></li>
+         <li class="bullet-item">$65<span><br> per month seniors</span></li>
+         <li class="bullet-item">$50<span><br> per month students</span></li>
+         <li class="cta-button"><%= button_to'Click for a Free Trial!', free_trial_path, :class => "button"  %></li>
+       </ul>
+     </div>
+     <div class="medium-4 columns">
+       <ul class="pricing-table recommended">
+           <li class="best"><span>Recommended</span></li>
+           <li class="title">One Year of Classes Paid Up Front</li>
+           <li class="bullet-item">$1,080<span> per year military &amp; first responders</span></li>
+           <li class="bullet-item">$780<span> per year seniors</span></li>
+           <li class="bullet-item">$600<span> per year students</span></li>
+           <li class="cta-button"><%= button_to'Click for a Free Trial!', free_trial_path, :class => "button"  %></li>
+        </ul>
+     </div>
+     <div class="medium-4 columns">
+        <ul class="pricing-table">
+         <li class="title">Month to Month</li>
+         <li class="bullet-item">$120<span><br> per month military &amp; first responders</span></li>
+         <li class="bullet-item">$120<span><br> per month family</span></li>
+         <li class="bullet-item">$85<span><br> per month seniors</span></li>
+         <li class="bullet-item">$75<span><br> per month students</span></li>
+         <li class="cta-button"><%= button_to'Click for a Free Trial!', free_trial_path, :class => "button"  %></li>
+        </ul>
+      </div>
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+
+

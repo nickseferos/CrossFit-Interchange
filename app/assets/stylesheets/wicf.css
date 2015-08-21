@@ -1,38 +1,38 @@
-//What is crossfit hero
-.hero {
+/*hero*/
+.hero_wicf {
   z-index: 100;
   background: url("http://crossfitinterchange.com/images/rowing.jpg") no-repeat center center;
   background-size: cover;
-  height: 100vh; }
-  .hero:before {
+  height: 80vh; }
+  .hero_wicf:before {
     content: '';
     position: absolute;
-    height: 100vh;
+    height: 80vh;
     top: 45px;
     right: 0;
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
     opacity: .6; }
-  .hero .intro {
+  .hero_wicf .intro {
     padding: 3rem;
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
-  .hero h1 {
+  .hero_wicf h1 {
     color: #fff;
     font-size: 1.5rem;
     line-height: 1.5em;
     letter-spacing: -0.025em;
     font-weight: 300;
     text-align: center; }
-  .hero p {
+  .hero_wicf p {
     color: #fff;
     line-height: 1.75em;
     font-weight: 200;
     text-align: center;
     margin-bottom: 2rem; }
-  .hero .tech-img {
+  .hero_wicf .tech-img {
     background: url("http://crossfitinterchange.com/images/dsc_0066.jpg") no-repeat center center;
     background-size: cover;
     height: 9rem;
@@ -41,13 +41,12 @@
     display: block;
     margin: 0 auto; }
   @media only screen and (min-width: 40.063em) {
-    .hero .tech-img {
+    .hero_wicf .tech-img {
       height: 18rem;
       width: 18rem; }
-    .hero h1 {
+    .hero_wicf h1 {
       padding-top: 4.5rem;
       text-align: right;
       font-size: 2.5rem; }
-    .hero p {
+    .hero_wicf p {
       text-align: right; } }
-//end
