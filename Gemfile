@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'activeresource', require: 'active_resource'
 gem 'foundation-rails', '~> 5.5.2.1'
 gem 'rails', '4.2.3'
 gem 'sqlite3'
@@ -11,7 +12,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-# gem 'mindbody', '~> 0.1.7'
+#gem 'mindbody-api', '~>0.5'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development

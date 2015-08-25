@@ -4,6 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+require 'active_resource/railtie'
 Bundler.require(*Rails.groups)
 
 module CFI

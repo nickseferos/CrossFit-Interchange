@@ -1,0 +1,10 @@
+<% @wods.each.do |wod| %>
+	<div>
+		<h2>
+			<%= link_to wod.title, wod %>
+		</h2>
+		<p>
+			<%= wod.creates_at.strftime("posted on %B %d, %Y") %>
+		</p>
+	</div>
+<% end %>	

@@ -1,1 +1,20 @@
-<h1>Wod goes here once I finish building the API</h1>
+<h1><center>
+  -Workout of the Day-
+</center></h1>
+
+<hr>
+
+<% @wods.each do |wod| %>
+
+  <div>
+    <h2>
+      <%= link_to wod.title %>
+    </h2>
+    <h6 class="subheader">
+      <%= wod.created_at.strftime("Posted on %B %d, %Y") %>
+    </h6>
+    <p>
+      <%= wod.body %>
+    </p>
+  </div>
+<% end %>

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	def index
-		
+		@wods = Wod.find :last
 	end
 
 	def about_us
