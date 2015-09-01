@@ -10,15 +10,20 @@
 </section>
 
 
-<div class="small-12 columns">
+<div class="small-6 small-centered medium-centered large-centered columns">
   <form>
-    <p><span>Hello, my name is</span> <input type="text" class="dream-search" placeholder="input name here"> <span>and I'm trying to learn how to</span> 
+    <p><span>I want to know more about</span> 
     <select class="verb-dropdown">
-      <option value="" disabled selected>verb </option>
-      <option value="code">code</option>
-      <option value="design">design</option>
+      <option value="CrossFit" disabled selected>CrossFit </option>
+      <option value="">CrossFit Schedule</option>
+      <option value="design">CrossFit Pricing</option>
+      <option value="design"><hr></option>
+      <option value="design">Group Classes</option>
+      <option value="">Group Classes Schedule</option>
+      <option value="group_classes_pricing_path">Group Classes Pricing</option>
+      <option value="child_care_path">Child Care</option>
     </select>.</p>
-
+    <%= button_to 'Go!', free_trial_path, class: 'button center' %>
   </form>
 
 </div>
@@ -29,7 +34,7 @@
 
 <hr>
 
-<% @wods.last do |wod| %>
+<% @wods.each do |wod| %>
 
   <div>
     <h2>

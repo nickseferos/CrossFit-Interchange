@@ -16,7 +16,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
-gem 'savon', '~> 2.11.1'
+gem 'savon', '~> 2.0.0'
+gem 'mail_form'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'

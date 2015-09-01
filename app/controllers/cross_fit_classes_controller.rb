@@ -49,6 +49,18 @@ class CrossFitClassesController < ApplicationController
 
 
 		# end
+    require 'savon'
+  	client = Savon.client(wsdl: "https://api.mindbodyonline.com/0_5/ClassService.asmx?wsdl")
+    site_ids = { 'int' => -99 }
+    source_credentials = { "SourceName" => "CFInterchange", "Password" => "+nOZzglQN9EwuARqjJKxlq7sPQg=", "SiteIDs" => site_ids }
+    user_credentials = { "Username" => "Siteowner", "Password" => "demo1234", "SiteIDs" => site_ids }
+    
+    response = client.call(:authenticate) do
+      message source_credentials, user_credentials
+      convert_request_keys_to :camelcase
+    end
+    response = client.request :get_classes
+
 	end
 
 	def cf_pricing
