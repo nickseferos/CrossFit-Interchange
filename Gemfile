@@ -20,6 +20,9 @@ gem 'savon', '~> 2.0.0'
 gem 'mail_form'
 gem 'simple_form'
 gem 'tumblr_client'
+gem 'json'
+
+
 
 group :development, :test do
   gem 'byebug'

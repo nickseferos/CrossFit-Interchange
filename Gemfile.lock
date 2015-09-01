@@ -193,6 +193,7 @@ DEPENDENCIES
   foundation-rails (~> 5.5.2.1)
   jbuilder (~> 2.0)
   jquery-rails
+  json
   mail_form
   rails (= 4.2.3)
   sass-rails (~> 5.0)

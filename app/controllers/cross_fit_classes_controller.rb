@@ -68,6 +68,19 @@ class CrossFitClassesController < ApplicationController
 	end
 
 	def wod
-		@wods = Wod.find(:all)
-	end
+  #   Tumblr.configure do |config|
+  #     config.consumer_key = "tWncHp5Q4yob4R9TwF88HznAUUnULGh1vXFRLZc7m3mplvM29t"
+  #     config.consumer_secret = "4kflJ6cWMpHon52ltcoMrQpJaN4a1oZ6pF5JvFE5MA22jALwFj"
+  #     config.oauth_token = "FDaOUtMmrDPlahKzOnITFXLf6j4fldqgidzh3jLFLQQvx5ztRc"
+  #     config.oauth_token_secret = "3SP963UHJfBBxooskbtxk6RpRVUKoTucNkc5WHtweeV5YSj0Pg"
+  #   end
+
+  #   @clients = Tumblr::Client.new
+		# @clients.posts("crossfitinterchange.tumblr.com", :limit => 10)
+    client = Tumblr::Client.new :consumer_key => 'tWncHp5Q4yob4R9TwF88HznAUUnULGh1vXFRLZc7m3mplvM29t'
+
+    # Make the request
+    @wods = client.posts 'crossfitinterchange.tumblr.com', :limit => 14
+  end
+	
 end

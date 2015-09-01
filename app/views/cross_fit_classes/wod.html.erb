@@ -4,17 +4,6 @@
 
 <hr>
 
-<% @wods.each do |wod| %>
-
-  <div>
-    <h2>
-      <%= link_to wod.title %>
-    </h2>
-    <h6 class="subheader">
-      <%= wod.created_at.strftime("Posted on %B %d, %Y") %>
-    </h6>
-    <p>
-      <%= wod.body %>
-    </p>
-  </div>
+<% @wods.each do |q| %>
+<p><% q %></p>
 <% end %>
