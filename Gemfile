@@ -19,6 +19,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'savon', '~> 2.0.0'
 gem 'mail_form'
 gem 'simple_form'
+gem 'tumblr-api'
 
 group :development, :test do
   gem 'byebug'

@@ -29,22 +29,22 @@
 </div>
 
 <h1><center>
-  -Workout of the Day-
+  <%= link_to 'Workout of the Day', wod_path %>
 </center></h1>
 
 <hr>
 
-<% @wods.each do |wod| %>
+<% @posts.each do |post| %>
 
   <div>
     <h2>
-      <%= link_to wod.title wod_path %>
+      <%= post.title %>
     </h2>
     <h6 class="subheader">
-      <%= wod.created_at.strftime("Posted on %B %d, %Y") %>
+      date
     </h6>
     <p>
-      <%= wod.body %>
+      <%= post.body %>
     </p>
   </div>
 <% end %>
