@@ -81,6 +81,10 @@ class CrossFitClassesController < ApplicationController
 
     # Make the request
     @wods = client.posts 'crossfitinterchange.tumblr.com', :limit => 14
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @wods }
+    end
   end
 	
 end

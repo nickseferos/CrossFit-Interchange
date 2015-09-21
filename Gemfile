@@ -21,7 +21,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'tumblr_client'
 gem 'json'
-
+gem 'crack', '~> 0.4.2'
 
 
 group :development, :test do
