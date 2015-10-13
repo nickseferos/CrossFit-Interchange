@@ -18,12 +18,13 @@ class PagesController < ApplicationController
       config.oauth_token_secret = "3SP963UHJfBBxooskbtxk6RpRVUKoTucNkc5WHtweeV5YSj0Pg"
     end
 
-    client = Tumblr::Client.new
-    #   :consumer_key => 'tWncHp5Q4yob4R9TwF88HznAUUnULGh1vXFRLZc7m3mplvM29t',
-    #   :consumer_secret => '4kflJ6cWMpHon52ltcoMrQpJaN4a1oZ6pF5JvFE5MA22jALwFj',
-    #   :oauth_token => 'FDaOUtMmrDPlahKzOnITFXLf6j4fldqgidzh3jLFLQQvx5ztRc',
-    #   :oauth_token_secret => '3SP963UHJfBBxooskbtxk6RpRVUKoTucNkc5WHtweeV5YSj0Pg'
-    # })
+    client = Tumblr::Client.new({
+      :consumer_key => 'tWncHp5Q4yob4R9TwF88HznAUUnULGh1vXFRLZc7m3mplvM29t',
+      :consumer_secret => '4kflJ6cWMpHon52ltcoMrQpJaN4a1oZ6pF5JvFE5MA22jALwFj',
+      :oauth_token => '6rVhWht50d20l0caHKSb4kWmDYErepSrm3pONuLsxgtgcNANEu',
+      :oauth_token_secret => 'YZ0ozfY3skF0nqNQjdPWF5E0zxc52NqXGMOgoUhs4NpyuR3E3r'
+    })
+
 
     @posts = client.posts("crossfitinterchange.tumblr.com")
     # @posts = Kaminari.paginate_array(@posts["posts"]).page(params[:page]).per(10)
