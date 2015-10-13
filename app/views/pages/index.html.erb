@@ -33,7 +33,6 @@
 </center></h1>
 
 <hr>
-
-<% @posts.each do |post| %>
-
+<% @wod do |p| %>
+<%= p.body %>
 <% end %>
