@@ -22,7 +22,8 @@ gem 'simple_form'
 gem 'tumblr_client'
 gem 'json'
 gem 'crack', '~> 0.4.2'
-
+gem 'matenia-tumblr-api'
+gem 'httparty'
 
 
 group :development, :test do
