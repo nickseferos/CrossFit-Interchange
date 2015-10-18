@@ -7,6 +7,9 @@ class PagesController < ApplicationController
     client = Tumblr::Client.new :consumer_key => 'tWncHp5Q4yob4R9TwF88HznAUUnULGh1vXFRLZc7m3mplvM29t'
 
     @post = client.posts 'crossfitinterchange.tumblr.com', :type => 'text', :limit => 1, :filter => 'html'
+    @post = @post.to_json
+    puts @post.class
+    @title = @post['blog']['title']
 
 
 	end
