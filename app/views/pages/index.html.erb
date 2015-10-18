@@ -32,7 +32,7 @@
   <%= link_to 'Workout of the Day', wod_path %>
 </center></h1>
 
-<hr>
-<% @wod do |p| %>
+<% @post.each do |p| %>
+<%= p.title %>
 <%= p.body %>
 <% end %>
