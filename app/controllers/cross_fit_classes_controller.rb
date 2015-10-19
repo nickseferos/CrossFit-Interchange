@@ -55,11 +55,11 @@ class CrossFitClassesController < ApplicationController
     source_credentials = { "SourceName" => "CFInterchange", "Password" => "+nOZzglQN9EwuARqjJKxlq7sPQg=", "SiteIDs" => site_ids }
     user_credentials = { "Username" => "Siteowner", "Password" => "demo1234", "SiteIDs" => site_ids }
     
-    response = client.call(:authenticate) do
-      message source_credentials, user_credentials
-      convert_request_keys_to :camelcase
+    response = client.call(:get_classes) do
+      
+    
     end
-    response = client.request :get_classes
+    response.to_hash
 
 	end
 

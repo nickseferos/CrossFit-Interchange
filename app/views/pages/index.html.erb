@@ -11,25 +11,22 @@
 </section>
 
 <div class="row">
-  <div class="small-12 medium-8 small-centered columns">
+  <div class="small-10 medium-7 small-centered columns">
     <form>
       <p class="text-center"><span>I want to know more about</span> 
-      <select class="verb-dropdown">
-        <option value="CrossFit" selected>CrossFit </option>
-        <option value="">CrossFit Schedule</option>
-        <option value="design">CrossFit Pricing</option>
-        <option value="design"><hr></option>
-        <option value="design">Group Classes</option>
-        <option value="">Group Classes Schedule</option>
-        <option value="group_classes_pricing_path">Group Classes Pricing</option>
-        <option value="child_care_path">Child Care</option>
-      </select>      
-      <%= button_to 'Go!', free_trial_path, class: 'button success' %>
+        <select class="verb-dropdown" id="user-redirect" name="URL"
+  onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
+          <option selected></option>
+          <option value="/crossfit" data-edit-url="<%= crossfit_path %>">CrossFit </option>
+          <option value="/group_classes">Group Classes</option>
+          <option value="/child_care">Child Care</option>
+        </select>
       </p>
     </form>
   </div>
 </div>
-</div>
+
+
 <div class="row">
   <div class="small-10 small-centered columns">
     <h1 class="text-center">
@@ -52,4 +49,5 @@
     </p>
   </div>
 </div>
+<br/>
 
