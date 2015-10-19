@@ -27,14 +27,26 @@
   </form>
 
 </div>
-
-<h1><center>
-  <%= link_to 'Workout of the Day', wod_path %>
-</center></h1>
-
-<h2>
-<%= @title %>
-</h2>
-<p>
-  <%== @body %>
-</p>
+<div class="row">
+  <div class="small-10 small-centered columns">
+    <h1 class="text-center">
+      <%= link_to 'Workout of the Day', wod_path %>
+    </h1>
+  </div>
+</div>
+</n>
+<div class="row">
+  <div class="small-10 small-centered columns">
+    <h2 class="text-center">
+      <%== @title %>
+    </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="small-10 medium-6 small-centered columns">
+    <p class="text-center">  
+      <%== @body %>
+    </p>
+  </div>
+</div>
+</n>
