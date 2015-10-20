@@ -25,6 +25,7 @@ gem 'crack', '~> 0.4.2'
 gem 'matenia-tumblr-api'
 gem 'httparty'
 gem 'working_hours'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'

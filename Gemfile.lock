@@ -105,6 +105,7 @@ GEM
       mini_portile (~> 0.6.0)
     nori (2.0.4)
     oauth (0.4.7)
+    puma (2.14.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -209,6 +210,7 @@ DEPENDENCIES
   json
   mail_form
   matenia-tumblr-api
+  puma
   rails (= 4.2.3)
   sass-rails (~> 5.0)
   savon (~> 2.0.0)
