@@ -1,5 +1,7 @@
 <% content_for :title, "Group Classes | CrossFit Interchange" %>
-<h1>Group classes</h1>
+<div class="row">
+	<h1>Group Classes</h1>
+</div>
 
 <div class="row">
 	<div class="small-10 small-centered cloumns">
@@ -7,7 +9,12 @@
 			Barre
 		</h1>
 	</div>
-	<div class="small-12 small-centered columns">
+</div>
+<div class="row">
+	<div class="show-for-medium-up medium-4 columns">
+		<%= image_tag 'classes/barre-1.jpg', alt: "Barre ballet class at CrossFit Interchange, Fairfield, CA. Green Valley" %>
+	</div>
+	<div class="medium-8 small-12 small-centered columns">
 		<p class="text-justify">
 			Pronounced <i>bar</i> is a combination of Pilates, yoga and ballet resulting in an intense workout that gives great results! This workout focuses on strengthning the lower abdominal and leg muscles and helps keep you in shape. Prior dance experience isn't required either. Everyone is welcome to join in no matter you experience level. <%= link_to 'Stop by', contact_path %> to <%= link_to 'try out', free_trial_path %> a barre class and see for yourself.
 		</p>
@@ -45,10 +52,16 @@
 			TRX
 		</h1>
 	</div>
-	<div class="small-12 small-centered columns">
+</div>
+<div class="row">
+	<div class="medium-8 small-12 columns">
 		<p class="text-justify">
 			TRX... Check out the <%= link_to 'schedule', group_classes_schedule_path %> and come by to <%= link_to 'try out the class', free_trial_path %>.
 		</p>
+	</div>
+
+	<div class="show-for-medium-up medium-4 columns">
+		<%= image_tag 'classes/trx-2.jpg', alt: "TRX class at CrossFit Interchange, Fairfield, CA. Green Valley" %>
 	</div>
 </div>
 

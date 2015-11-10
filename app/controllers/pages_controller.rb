@@ -32,7 +32,8 @@ class PagesController < ApplicationController
 		  :sat => {'08:00' => '10:00'}
 	    }
 	    WorkingHours::Config.time_zone = 'America/Vancouver'
-	status = Time.utc(2014, 8, 4, 7, 16).in_working_hours?
+	    current_time = 6
+	status = Time.utc(current_time).in_working_hours?
     case status
     when true
       @status = "We are currently open. Stop by and meet one of the coaches, try a class or sign up for a <a href='/free_trial'> ten-day free trial </a>! Or check out our <a href='/crossfit_schedule'>class schedule</a> to find out when a coach will be in the building. <p class='text-center'>Our address is <a href='https://goo.gl/maps/iLduJMrYqvD2'> 324 Campus Lane Suite E, Fairfield, CA 94534</a>. Look for the large 'CrossFit Interchange' flag."
