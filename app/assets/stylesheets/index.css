@@ -15,12 +15,10 @@
     opacity: .3; }
   .hero_index .logo-index {
     background: url("http://crossfitinterchange.com/images/cfi_logo_greengray-u4329-fr.png") no-repeat center center;
-    background-size: cover;
-    position: absolute;
-    height: 32rem;
-    width: 32rem;
-    display: inline-block;
-    margin: 1rem auto; }
+  background-size: cover;
+  height: 80vh;
+  margin-bottom: 3rem;
+  padding-top: 3rem; }
 
     input[type=text] {
    padding-left: 15px;
