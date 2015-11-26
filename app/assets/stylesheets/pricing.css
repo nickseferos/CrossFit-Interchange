@@ -7,6 +7,12 @@
 
   .price_hero_text {
     padding-top: 12rem;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: center;
   }
 
   .price_secondary{
@@ -20,6 +26,52 @@
     font-weight: 300;
     text-align: center;
   }
+
+    .hero_price_gc {
+    background: url("http://crossfitinterchange.com/images/gc-pricing-hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    margin-bottom: 3rem; }
+
+  .price_hero_gc_text {
+    padding-top: 12rem;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: right;
+  }
+
+  .price_secondary{
+    padding: 4rem 0 0.9rem 0;
+  }
+  .hero_price h1 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: right;
+  }
+  .group_class {
+    background: url("http://crossfitinterchange.com/images/group-class-hero.jpg") no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    margin-bottom: 3rem; }
+
+  .price_secondary{
+    padding: 4rem 0 0.9rem 0;
+  }
+  .group_class h1 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: center;
+  }
+
 .price_header {
   padding-bottom: 3rem;
 }

@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   get 'group_classes_pricing' => 'group_classes#gc_pricing'
   get 'group_classes_schedule' => 'group_classes#gc_schedule'
   get 'group_classes' => 'group_classes#index'
+
+  get '/404' => 'errors#not_found'
+  get '/500' => 'errors#internal_server_error'
 end
