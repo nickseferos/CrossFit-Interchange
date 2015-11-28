@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	require 'httparty'
-	cahces_page :contact, :free_trial, :staff
+	# cahces_page :contact, :free_trial, :staff
   def index
     require 'json'
     require 'open-uri'

@@ -1,6 +1,6 @@
 class CrossFitClassesController < ApplicationController
 
-	caches_page :wicf, :cf_schedule, :cf_pricing, :wod
+	# caches_page :wicf, :cf_schedule, :cf_pricing, :wod
 
 	def wicf
 		

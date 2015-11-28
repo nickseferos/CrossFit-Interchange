@@ -1,6 +1,6 @@
 class GroupClassesController < ApplicationController
 
-	caches_page :group_classes, :gc_schedule, :gc_pricing
+	# caches_page :group_classes, :gc_schedule, :gc_pricing
 
 	def group_classes
 		
