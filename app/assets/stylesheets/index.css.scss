@@ -1,5 +1,5 @@
 .hero_index {
-	background: url("group.jpg") no-repeat center center;
+	background: asset_url("group.jpg") no-repeat center center;
 	background-size: cover;
 	height: 80vh;
 	margin-bottom: 3rem; }
@@ -14,7 +14,7 @@
     background-image: linear-gradient(to bottom right, #000, #000);
     opacity: .3; }
   .hero_index .logo-index {
-    background: url("CFI_logo.png") no-repeat center center;
+    background: asset_url("CFI_logo.png") no-repeat center center;
   background-size: cover;
   height: 80vh;
   margin-bottom: 3rem;

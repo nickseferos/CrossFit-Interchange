@@ -1,6 +1,6 @@
 /*Hero*/
   .hero_price {
-    background: url("classes/cf-pricing-hero.jpg") no-repeat center center;
+    background: asset_url("classes/cf-pricing-hero.jpg") no-repeat center center;
     background-size: cover;
     height: 80vh;
     margin-bottom: 3rem; }
@@ -28,7 +28,7 @@
   }
 
     .hero_price_gc {
-    background: url("classes/gc-pricing-hero.jpg") no-repeat center center;
+    background: asset_url("classes/gc-pricing-hero.jpg") no-repeat center center;
     background-size: cover;
     height: 80vh;
     margin-bottom: 3rem; }
@@ -55,7 +55,7 @@
     text-align: right;
   }
   .group_class {
-    background: url("classes/group-class-hero.jpg") no-repeat center center;
+    background: asset_url("classes/group-class-hero.jpg") no-repeat center center;
     background-size: cover;
     height: 80vh;
     margin-bottom: 3rem; }
