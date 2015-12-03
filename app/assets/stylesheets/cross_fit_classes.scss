@@ -1,3 +1,114 @@
 // Place all the styles related to the CrossFit_Classes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*quote*/
+
+
+.centered-text {
+  text-align: center;
+}
+
+.quote-marks {
+  font-size: 100px;
+  font-family: Garamond;
+  color: #777;
+}
+
+.move-right {
+  position: relative;
+  text-align: right;
+}
+
+.quote {
+  border-radius: 5px;
+}
+.quote p {
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 40em) {
+  .quote p {
+    padding-left: 20px;
+  }
+}
+
+.member {
+  margin-left: 25px;
+  margin-bottom: 80px;
+}
+.member .photo {
+  background-color: #ccc;
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 15px;
+}
+.member p {
+  position: relative;
+  top: 5px;
+}
+.member p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.member p:nth-child(3) {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+}
+
+
+/*hero*/
+.hero_wicf {
+  z-index: 100;
+  background: url("classes/rowing.jpg") no-repeat center center;
+  background-size: cover;
+  height: 80vh; }
+  .hero_wicf:before {
+    content: '';
+    position: absolute;
+    height: 80vh;
+    top: 45px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+    opacity: .6; }
+  .hero_wicf .intro {
+    padding: 3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  .hero_wicf h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    text-align: center; }
+  .hero_wicf p {
+    color: #fff;
+    line-height: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .hero_wicf .tech-img {
+    background: url('classes/gail.jpg') no-repeat center center;
+    background-size: cover;
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; }
+  @media only screen and (min-width: 40.063em) {
+    .hero_wicf .tech-img {
+      height: 18rem;
+      width: 18rem; }
+    .hero_wicf h1 {
+      padding-top: 4.5rem;
+      text-align: right;
+      font-size: 2.5rem; }
+    .hero_wicf p {
+      text-align: right; } }
