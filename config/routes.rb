@@ -28,5 +28,7 @@ Rails.application.routes.draw do
 # Legacy patching from old site to new
   get '*path' + '.html' => redirect('/')
 
+  get '/sitemap', :to => redirect('/sitemap.xml')
+
 
 end
