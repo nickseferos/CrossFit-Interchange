@@ -24,4 +24,9 @@ Rails.application.routes.draw do
 
   get '/404' => 'errors#not_found'
   get '/500' => 'errors#internal_server_error'
+
+# Legacy patching from old site to new
+  get '*path' + '.html' => redirect('/')
+
+
 end
