@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'contact' => 'pages#contact'
   get 'free_trial' => 'pages#free_trial'
   get 'staff' => 'pages#staff'
+  get 'landing' => 'pages#landing'
 
   get 'crossfit_pricing' => 'cross_fit_classes#cf_pricing'
   get 'crossfit_schedule' => 'cross_fit_classes#cf_schedule'

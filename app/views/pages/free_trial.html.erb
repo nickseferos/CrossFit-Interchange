@@ -18,3 +18,14 @@
     </p>
 	</div>
 </div>
+
+<div class="row">
+	<div class="small-12 columns">
+		<%= simple_form_for do |f| %>
+			<%= f.input :name, placeholder: 'Your Name' %>
+			<%= f.input :email, placeholder: 'your_email@example.com' %>
+			<%= f.input :tel, placeholder: '555-555-5555' %>
+      <%= f.button :submit %>
+		<% end %>
+	</div>
+</div>
