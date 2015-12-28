@@ -40,6 +40,20 @@ form {
   display: inline-block;
 }
 
+.white-header {
+  color: #fff;
+  font-weight: 600;
+}
+
+.gr-header {
+  color: #eee
+}
+
+.thin-header {
+  color: #fff;
+  font-weight: 100
+}
+
 p {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -76,9 +90,3 @@ form p span { display: block; }
     display: inline-block;
   } 
 }
-
-select.verb-dropdown {
-  -webkit-appearance: none;
-  border-radius: 0 0 0 0;
-  color: rgba(0, 0, 0, 0.75)
- }

@@ -1,22 +1,52 @@
 <% content_for :title, "CrossFit Interchange | Love Getting Fit" %>
 <% content_for :description , "CrossFit Interchange is premiere location for CrossFit and Gropu classes in Green Valley and Fairfield, CA. Love Getting Fit." %>
 <section class="hero_index">
-  <!-- <div class="row price_hero_text">
-    <div class="small-6 large-centered columns"><h1 class="text-center">CrossFit Pricing</h1></div>
-  </div> -->
-    <div class="row intro">
-    <div class="small-centered medium-centered large-centered medium-7 large-7 columns">
-      <div class="logo-index"></div>
+  <div class="row hero_text">
+    <div class="small-12 medium-5 columns">
+      <br/><br/>
+      <dl><dt class="gr-header">CrossFit Interchange</dt></dl>
+      <h1 class="center thin-header">Here's to a healthier you.</h1>
+      <%= link_to 'Try us out for free.', free_trial_path, class: 'button' %>
+      <h6><%= link_to 'Learn more about CrossFit >', crossfit_path, :class => 'white-header' %></h6>
+      <h6><%= link_to 'Learn more about Group Classes >', group_classes_path, :class => 'white-header' %></h6>
     </div>
   </div>
 </section>
 <!-- Flat icons here -->
 
+<div class="row">
+  <div class="small-12 medium-4 columns">
+  <center><%= link_to (image_tag 'kb.png', :size => '80x80'), crossfit_path %></center>
+    <dl class="text-justify">
+      <dt class="text-center">CrossFit is for Everyone</dt>
+      <dd>CrossFit helps forge the athlete in you. Become stronger than you thought possible and change the way you look at yourself. 
+      <blockquote>"Crossfit Interchange has changed the way I look at fitness." - Ron K. </blockquote>
+      </dd>
+      <dt><%= link_to"Read the rest of Ron's story and learn more.", crossfit_path %></dt>
+    </dl>
+  </div>
+  <div class="small-12 medium-4 columns">
+  <center><%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %></center>
+    <dl class="text-justify">
+      <dt class="text-center">We love community</dt>
+      <dd>Something amazing happens when we become a community, not just a gym. People are excited to see eachother, and see eachother achieve. Your fitness routine transforms from a routine into a lyfestyle.</dd>
+    </dl>
+  </div>
+  <div class="small-12 medium-4 columns">
+  <center><%= link_to (image_tag 'yoga.png', :size => '80x80'), group_classes_path %></center>
+    <dl class="text-justify">
+      <dt class="text-center">Group classes galore</dt>
+      <dd>We offer yoga, spin classes, TRX, Barre &amp; more. Get yourself in shape one class at a time.</dd>
+      <dt><%= link_to "Learn more about group classes.", group_classes_path %></dt>
+    </dl>
+  </div>
+</div>
+
 <!-- Subscribe to email list -->
 <div class="row">
   <div class="small-12 columns">
     <div class="meduim-8 small-10 small-centered medium-centerd columns"></div>
-    <h1> test </h1>
+    <h1> subscribe here </h1>
   </div>
 </div>
 

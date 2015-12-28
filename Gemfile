@@ -26,6 +26,7 @@ gem 'matenia-tumblr-api'
 gem 'httparty'
 gem 'working_hours'
 gem 'puma'
+gem 'mailchimp-api', require: 'mailchimp'
 
 group :development, :test do
   gem 'byebug'
