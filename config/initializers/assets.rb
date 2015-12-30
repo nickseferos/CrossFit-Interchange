@@ -1,14 +1,14 @@
-# Be sure to restart your server when you modify this file.
-
-# Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( kb.png )
 Rails.application.config.assets.precompile += %w( yoga.png )
 Rails.application.config.assets.precompile += %w( community.png )
-
-# Add additional assets to the asset load path
-# Rails.application.config.assets.paths << Emoji.images_path
-
-# Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+Rails.application.config.assets.precompile += %w( pricing.css )
+Rails.application.config.assets.precompile += %w( footer.css  )
+Rails.application.config.assets.precompile += %w( cross_fit_classes.css  )
+Rails.application.config.assets.precompile += %w( errors.css  )
+Rails.application.config.assets.precompile += %w( group_classes.css  )
+Rails.application.config.assets.precompile += %w( index.css  )
+Rails.application.config.assets.precompile += %w( pages.css  )
+Rails.application.config.assets.precompile += %w( pricing.css  )
+Rails.application.config.assets.precompile += %w( staff.css  )
+Rails.application.config.assets.precompile += %w( contact.css )

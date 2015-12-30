@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :group_classes
   resources :pages
 
-  root 'pages#index'
+  root 'pages#landing'
 
   get 'about' => 'pages#about_us'
   get 'child_care' => 'pages#child_care'

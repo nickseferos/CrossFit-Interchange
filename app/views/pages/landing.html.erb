@@ -1,12 +1,13 @@
 <% content_for :title, "CrossFit Interchange | Love Getting Fit" %>
-<% content_for :description , "CrossFit Interchange is premiere location for CrossFit and Gropu classes in Green Valley and Fairfield, CA. Love Getting Fit." %>
+<% content_for :description , "CrossFit Interchange is premiere location for CrossFit and Group classes in Green Valley and Fairfield, CA. Love Getting Fit." %>
+<% content_for :css, 'index.css' %>
 <section class="hero_index">
   <div class="row hero_text">
     <div class="small-12 medium-5 columns">
       <br/><br/>
       <dl><dt class="gr-header">CrossFit Interchange</dt></dl>
       <h1 class="center thin-header">Here's to a healthier you.</h1>
-      <%= link_to 'Try us out for free.', free_trial_path, class: 'button' %>
+      <%= link_to 'Try us out for free.', free_trial_path, class: 'button link-header' %>
       <h6><%= link_to 'Learn more about CrossFit >', crossfit_path, :class => 'white-header' %></h6>
       <h6><%= link_to 'Learn more about Group Classes >', group_classes_path, :class => 'white-header' %></h6>
     </div>
@@ -26,7 +27,7 @@
     </dl>
   </div>
   <div class="small-12 medium-4 columns">
-  <center><%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %></center>
+  <center><%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %></center><br/>
     <dl class="text-justify">
       <dt class="text-center">We love community</dt>
       <dd>Something amazing happens when we become a community, not just a gym. People are excited to see eachother, and see eachother achieve. Your fitness routine transforms from a routine into a lyfestyle.</dd>
@@ -41,12 +42,11 @@
     </dl>
   </div>
 </div>
-
+<div class="small-8 small-centered columns"><hr></div>
 <!-- Subscribe to email list -->
 <div class="row">
   <div class="small-12 columns">
     <div class="meduim-8 small-10 small-centered medium-centerd columns"></div>
-    <h1> subscribe here </h1>
   </div>
 </div>
 

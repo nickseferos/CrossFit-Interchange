@@ -60,7 +60,6 @@ GEM
       safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    excon (0.45.4)
     execjs (2.6.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
@@ -94,9 +93,6 @@ GEM
     mail_form (1.5.1)
       actionmailer (>= 3.2, < 5)
       activemodel (>= 3.2, < 5)
-    mailchimp-api (2.0.6)
-      excon (>= 0.16.0)
-      json (>= 1.7.7)
     matenia-tumblr-api (0.1.6)
       activesupport
       httparty
@@ -216,7 +212,6 @@ DEPENDENCIES
   jquery-rails
   json
   mail_form
-  mailchimp-api
   matenia-tumblr-api
   puma
   rails (= 4.2.3)
