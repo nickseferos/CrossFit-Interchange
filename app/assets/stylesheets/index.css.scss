@@ -1,6 +1,7 @@
 .hero_index {
 	background: asset_url("group.jpg") no-repeat center center;
 	background-size: cover;
+  background-position: top;
 	height: 80vh;
 	margin-bottom: 3rem; }
    .hero_index:before {
@@ -46,7 +47,8 @@ form {
 }
 
 .gr-header {
-  color: #eee
+  color: #eee;
+  padding-top: 4.7rem
 }
 
 .link-header {

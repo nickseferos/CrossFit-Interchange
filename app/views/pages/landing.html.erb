@@ -4,7 +4,6 @@
 <section class="hero_index">
   <div class="row hero_text">
     <div class="small-12 medium-5 columns">
-      <br/><br/>
       <dl><dt class="gr-header">CrossFit Interchange</dt></dl>
       <h1 class="center thin-header">Here's to a healthier you.</h1>
       <%= link_to 'Try us out for free.', free_trial_path, class: 'button link-header' %>
@@ -27,10 +26,10 @@
     </dl>
   </div>
   <div class="small-12 medium-4 columns">
-  <center><%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %></center><br/>
+  <center><%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %></center>
     <dl class="text-justify">
       <dt class="text-center">We love community</dt>
-      <dd>Something amazing happens when we become a community, not just a gym. People are excited to see eachother, and see eachother achieve. Your fitness routine transforms from a routine into a lyfestyle.</dd>
+      <dd>Something amazing happens when we become a community, not just a gym. People are excited to see eachother, and see eachother achieve. Your fitness routine transforms from a routine into a lifestyle.</dd>
     </dl>
   </div>
   <div class="small-12 medium-4 columns">
@@ -69,7 +68,7 @@
 <div class="row">
   <div class="small-10 medium-6 small-centered columns">
     <p class="text-center">  
-      <%== @body %>
+      <%= @body.html_safe %>
     </p>
   </div>
 </div>

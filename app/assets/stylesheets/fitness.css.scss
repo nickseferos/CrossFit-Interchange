@@ -1,0 +1,27 @@
+.fitness {
+	background: asset_url("2016BodyChallenge.png") no-repeat center center;
+	background-size: cover;
+	background-position: top;
+	height: 120vh;
+}
+
+
+.header {
+font-weight: 900;
+color: #fff;
+padding-top: 4rem
+}
+.subhead {
+font-weight: 200;
+color: #fff
+}
+.subhead-light {
+font-weight :100;
+color: #fff;
+}
+.boxed {
+border-style: solid;
+color: white;
+padding-top: 1.7rem;
+padding-bottom: 1.7rem
+}

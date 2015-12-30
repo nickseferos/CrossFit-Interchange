@@ -24,6 +24,10 @@ class PagesController < ApplicationController
 		
 	end
 
+	def fitness_challenge
+		
+	end
+
 	def child_care
 		
 	end

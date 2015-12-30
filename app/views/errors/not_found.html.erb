@@ -1,31 +1,32 @@
+<br/>
 <div class="row">
-	<div class="col-sm-10">
-		<h1>
-			Uh-oh!
-		</h1>		
-	</div>
+  <div class="small-12 columns text-center">
+    <h1>
+      This Link Isn't Working
+    </h1>   
+  </div>
 </div>
 <div class="row">
-	<div class="col-sm-10">
-		<p>
-			Our bad! Sorry about this! 
-			The page you're looking for couldn't be found.
-		</p>		
+  <br/>
+	<div class="small-12 medium-6 columns">
+		<%= image_tag('error404.png') %>
 	</div>
+  <div class="small-12 medium-6 columns">
+    <h3>
+      Our bad! Sorry about this!
+    </h3>
+    <h4>
+      The page you're looking for couldn't be found.
+    </h4>
+    <ul>
+      <li>Either the page has been moved and we didn't tell you...</li>
+      <li>There was a bad bookmark</li>
+      <li>Or we built a bad link</li>
+    </ul>
+    <p>
+      Try checking the spelling of the URL or reload the page with the navagation bar above.
+    </p>
+    <%= link_to 'Take me Home!', root_path, :class => 'button' %>
+  </div>
 </div>
-<div class="row">
-	<div class="col-sm-10">
-		<ul>
-			<li>Either the page has been moved and we didn't tell you...</li>
-			<li>There was a bad bookmark</li>
-			<li>Or we built a bad link</li>
-		</ul>		
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-10">
-		<p>
-			Try checking the spelling of the url or reload the page with the navagation bar above.
-		</p>		
-	</div>
-</div>
+<br/>
