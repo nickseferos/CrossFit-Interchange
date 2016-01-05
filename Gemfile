@@ -26,6 +26,7 @@ gem 'matenia-tumblr-api'
 gem 'httparty'
 gem 'working_hours'
 gem 'puma'
+gem 'casein', '~>5.1.1'
 
 
 group :development, :test do
