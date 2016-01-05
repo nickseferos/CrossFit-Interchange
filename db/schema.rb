@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105230409) do
+ActiveRecord::Schema.define(version: 20160105231617) do
 
   create_table "casein_admin_users", force: :cascade do |t|
     t.string   "login",                           null: false
@@ -43,6 +43,23 @@ ActiveRecord::Schema.define(version: 20160105230409) do
   create_table "pages", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "staffs", force: :cascade do |t|
+    t.string   "image"
+    t.string   "name"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.date     "date"
+    t.text     "info"
+    t.text     "strength"
+    t.text     "conditioning"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

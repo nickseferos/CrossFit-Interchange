@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+	#Casein routes
+	namespace :casein do
+		resources :staffs
+		resources :workouts
+	end
+
+
   resources :cross_fit_classes
     post 'free_trial' => 'pages#free_trial'
   resources :group_classes
