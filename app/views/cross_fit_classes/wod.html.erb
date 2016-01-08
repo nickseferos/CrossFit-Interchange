@@ -5,4 +5,6 @@
 
 <hr>
 
-<%= @title %>
+<% @wods.each do |w| %>
+<%= w.date %>
+<% end %>
