@@ -18,6 +18,7 @@ class PagesController < ApplicationController
 
   		@title = response['response']['posts'][0]['title']
 	    @body = response['response']['posts'][0]['body']
+    @wod_landing = Workout.where('date <= ?', Date.today).order(:date).last
 	end
 
 	def about_us
