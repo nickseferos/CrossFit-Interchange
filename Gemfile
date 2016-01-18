@@ -30,6 +30,7 @@ gem 'casein', '~>5.1.1'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 
 
 group :development, :test do
