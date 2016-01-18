@@ -47,7 +47,7 @@
         <ul class="left">
 
           <li class="has-dropdown">
-            <a href="#">CrossFit</a>
+            <%= link_to 'CrossFit', crossfit_path %>
               <ul class="dropdown">
                 <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
                 <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
@@ -55,7 +55,7 @@
               </ul>
           </li>
           <li class="has-dropdown">
-            <a href="#">Group Classes</a>
+            <%= link_to'Group Classes', group_classes_path %>
               <ul class="dropdown">
                 <li><%= link_to 'Group Classes', group_classes_path %></li>
                 <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
@@ -63,7 +63,7 @@
               </ul>
           </li>
           <li class="has-dropdown">
-          <a href="#">About</a>
+          <%= link_to 'About', contact_path %>
           <ul class="dropdown">
             <li><%= link_to 'Staff', staff_path %></li>
             <li><%= link_to 'Contact Us', contact_path %></li>

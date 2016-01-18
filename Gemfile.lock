@@ -44,10 +44,35 @@ GEM
       gyoku (>= 0.4.0)
       nokogiri
     arel (6.0.3)
+    authlogic (3.4.4)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+      request_store (~> 1.0)
+      scrypt (~> 1.2)
+    autoprefixer-rails (6.1.2)
+      execjs
+      json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     byebug (8.2.1)
+    casein (5.1.1.5)
+      authlogic (= 3.4.4)
+      bootstrap-sass (= 3.3.3)
+      jquery-rails
+      sass-rails
+      scrypt (= 1.2.1)
+      will_paginate (= 3.0.7)
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -65,6 +90,10 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.2)
       faraday (>= 0.7.4, < 0.10)
+    ffi (1.9.10)
+    ffi-compiler (0.1.3)
+      ffi (>= 1.0.0)
+      rake
     foundation-rails (5.5.2.1)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -106,6 +135,8 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     nori (2.0.4)
     oauth (0.4.7)
+    orm_adapter (0.5.0)
+    pg (0.18.4)
     puma (2.15.3)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -139,6 +170,7 @@ GEM
     rake (10.4.2)
     rdoc (4.2.1)
       json (~> 1.4)
+    request_store (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.20)
     sass-rails (5.0.4)
@@ -155,6 +187,9 @@ GEM
       nokogiri (>= 1.4.0)
       nori (~> 2.0.3)
       wasabi (~> 3.0.0)
+    scrypt (1.2.1)
+      ffi-compiler (>= 0.0.2)
+      rake
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -170,7 +205,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.11)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
@@ -194,6 +228,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    will_paginate (3.0.7)
     working_hours (1.1.2)
       activesupport (>= 3.2)
       tzinfo
@@ -204,6 +239,8 @@ PLATFORMS
 DEPENDENCIES
   activeresource
   byebug
+  casein (~> 5.1.1)
+  ckeditor
   coffee-rails (~> 4.1.0)
   crack (~> 0.4.2)
   foundation-rails (~> 5.5.2.1)
@@ -213,6 +250,7 @@ DEPENDENCIES
   json
   mail_form
   matenia-tumblr-api
+  pg
   puma
   rails (= 4.2.3)
   sass-rails (~> 5.0)
@@ -220,7 +258,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_form
   spring
-  sqlite3
   tumblr_client
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
