@@ -27,6 +27,6 @@ class PagesController < ApplicationController
 	end
 
 	def staff
-		
+	  @staff = Staff.all.order("created_at DESC").reverse
 	end
 end

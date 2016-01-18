@@ -6,15 +6,18 @@
 		<%= casein_date_select f, f.object, :date %>
 	</div>
 	<div class="col-lg-6">
-		<%= casein_text_area f, f.object, :info %>
+		<p><strong>Info</strong></p>
+		<%= f.cktext_area :info %>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-lg-6">
-		<%= casein_text_area f, f.object, :strength %>
+		<p><strong>Strength</strong></p>
+		<%= f.cktext_area :strength %>
 	</div>
 	<div class="col-lg-6">
-		<%= casein_text_area f, f.object, :conditioning %>
+		<p><strong>Conditioning</strong></p>
+		<%= f.cktext_area :conditioning %>
 	</div>
 </div>

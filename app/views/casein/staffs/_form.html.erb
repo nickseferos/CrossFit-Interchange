@@ -3,7 +3,7 @@
 
 <div class="row">
 	<div class="col-lg-6">
-		<%= casein_text_field f, f.object, :image %>
+		<%= casein_file_field f, f.object, f.object, :image %>
 	</div>
 	<div class="col-lg-6">
 		<%= casein_text_field f, f.object, :name %>
@@ -11,8 +11,9 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-6">
-		<%= casein_text_area f, f.object, :bio %>
+	<div class="col-lg-12">
+		<p><strong>Bio</strong></p>
+		<%= f.cktext_area :bio %>
 	</div>
 	<div class="col-lg-6">
 		

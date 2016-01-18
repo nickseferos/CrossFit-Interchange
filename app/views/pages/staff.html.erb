@@ -13,79 +13,16 @@
 <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 
 <div class="row">
-<!-- amber -->
-  <div class="medium-12 large-6 columns"> 
-    <div class="profile-card">
-      <%= image_tag ('coaches/amber.jpg'), alt: 'Amber McLeod' %>
-      <div class="profile-info">
-        <h4 class="subheader">Amber McLeod</h4>
-        <p>I started CrossFit when I was 32 years old and just had my 3<sup>rd</sup> son. I didn’t come from an athletic background or play sports in school. I didn’t even know much about CrossFit and I’m sure if I did I would have just stayed home.  Everything was hard and everyone was better. My first WOD was Hellen. I remember  dying on the run. Struggling on the band for pull ups and the 10# plate for the KB swings. I couldn’t understand why people kept showing up. How could this be fun! Definitely didn’t love CrossFit at first. Before I knew it one day turned into weeks and weeks into months and I started to see progress. My clothes started to fit better. More than the way it made me look, I loved the way it made me feel. I felt strong for the first time and it was empowering. I was a better mom because of it. A few months later I got my level 1 and started an internship at CF Solano. I’ve been a full-time coach since.</p>
-        <p>I’m not sure what the future may hold for me. I just know that I love this stuff. I feel like I’m in the best shape of my life and I’m gonna do it until it’s no longer fun for me. I continue to learn a lot about myself and being able to do things I once never imagined I would be doing.</p>
-        <p>More then anything I love watching my boys grow up around CrossFit.  The community of hard work, dedication, discipline &amp; building friendships. If I can inspire anyone I hope I inspire them.</p>
-        <p><%= link_to 'CrossFit', crossfit_path %> | <%= link_to 'Schedule', crossfit_schedule_path %></p>
+  <% @staff.each do |s| %>
+    <div class="medium-12 large-6 columns"> 
+      <div class="profile-card">
+        <%= image_tag (s.image), alt: s.name %>
+        <div class="profile-info">
+          <h4 class="subheader"><%= s.name %></h4>
+          <p><%= s.bio.html_safe %></p>
+          <p><%= link_to 'CrossFit', crossfit_path %> | <%= link_to 'Schedule', crossfit_schedule_path %></p>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Mark McGovern -->
-  <div class="medium-12 large-6 columns">
-    <div class="profile-card">
-      <%= image_tag ('coaches/mark.jpg'), alt: 'Mark McGovern' %>
-      <div class="profile-info">
-        <h4 class="subheader">Mark McGovern</h4>
-        <p>I started Crossfit in 2012 after being invited over and over by friends.</p>
-        <p>In 9th grade, I injured my back doing squats so I didn’t want to have anything to do with CrossFit and Olympic lifting with a barbell. The time had come though as running marathons was getting both boring and time consuming. My first visit was both scary and enlightening. I left sore, tired, and thirsty for more. I’ve been hooked ever since and started coaching in 2015.</p>
-        <p>The community vibe and encouraging atmosphere make CF both fresh everyday and fun.</p>
-        <p><%= link_to 'CrossFit', crossfit_path %> | <%= link_to 'Class Schedules', crossfit_schedule_path %></p>
-      </div>
-    </div>
-  </div>
-  <!-- Mary Anne Gonser -->
-  <div class="medium-12 large-6 columns">
-    <div class="profile-card">
-      <%= image_tag ('coaches/mary_anne.jpg'), alt: 'Mary Anne Gonser' %>
-      <div class="profile-info">
-        <h4 class="subheader">Mary Anne Gonser</h4>
-        <p>I was born and raised in Marion, IL, and moved to California in 1992. After graduating from St. Louis University, I worked as a journalist and then devoted myself to being a full-time mom to my two awesome kids.</p>
-        <p>Fitness has always been a source of joy for me, going all the way back to the days of doing Jane Fonda workouts in the hallway of my college dorm. When my kids were young, chasing them around, walking my dogs and workout videos were my sources of exercise. In 2013, at the age of 49, I heard my friends talk about TRX. They looked great and it sounded fun, so I decided to give it a try. I joined a gym and became hooked. My goal was to have flatter abs by my 50th birthday. After my first TRX class, I was so sore I could barely lift my arm to brush my bangs out of my eyes! But I loved it and became a gym regular.</p>
-        <p>Today, at 51, I am more fit than I have ever been. In 2014, I became a certified group fitness instructor. I have taught body sculpt, <%= link_to 'yoga', group_classes_path %>, <%= link_to 'TRX', group_classes_path %> and recently became qualified to teach ballet <%= link_to 'barre', group_classes_path %> pilates, a class that I love!</p>
-        <p><%= link_to 'Group Classes', group_classes_path %> | <%= link_to 'Class Schedules', group_classes_schedule_path %></p>
-      </div>
-    </div>
-  </div>
-  <!-- Austin Largusa -->
-  <div class="medium-12 large-6 columns">
-    <div class="profile-card">
-      <%= image_tag ('coaches/austin.jpg'), alt: 'Austin Largusa' %>
-      <div class="profile-info">
-        <h4 class="subheader">Austin Largusa</h4>
-        <p>"Its so much fun" - that's the first thing I heard about CrossFit.</p> 
-        <p>I tried CrossFit on a whim after hearing so much about it and loving the competitive nature of the sport. My very first WOD was 100 Burpees For Time......I was hooked! Not quite. It took me a few visits to finally realize that what was so attractive wasn't even the sport itself; it was the community. It was the people cheering you on and saying "I believe in you". It was the "family" that I found there. CrossFit made fitness fun.</p>
-        <p><%= link_to 'CrossFit', crossfit_path %> | <%= link_to 'CrossFit Schedule', crossfit_schedule_path  %></p>
-      </div>
-    </div>
-  </div>
-  <!-- Brenda -->
-  <div class="medium-12 large-6 columns">
-    <div class="profile-card">
-      <%= image_tag ('coaches/brenda.jpg'), alt: 'Brenda Zanassi' %>
-      <div class="profile-info">
-        <h4 class="subheader">Brenda Zanassi</h4>
-        <p>I have always had a passion for working out.</p>
-        <p>When I was introduced to spin 16 years ago, I was immediately hooked! I started spinning three times a week and loved it. I had been taking spin classes for 6 months and was ready for a new adventure. I went on vacation in Arizona and I rented a road bike for fun, I ended up hooking up with some "big boy riders" and road 75 miles! I couldn't believe I could ride 75 miles and keep up with these weekend warriors who have been riding for years. When I came back from Arizona I bought a road bike and have been riding ever since. Due to my love of riding and challenging myself I decided to get certified in spin. I love it! I have met some amazing people in my classes. It keeps me smiling and feeling good inside and out!</p>
-        <p><blockquote>"If it doesn't challenge you, it doesn't change you" - Fred Devito</blockquote></p>
-        <p><%= link_to 'Spin Class', group_classes_path %> | <%= link_to 'Class Schedule', group_classes_schedule_path %></p>
-      </div>
-    </div>
-  </div>
-  <!-- Amanda -->
-  <div class="medium-12 large-6 columns">
-    <div class="profile-card">
-      <%= image_tag ('coaches/amanda.jpg'), alt: 'Amanda McGovern' %>
-      <div class="profile-info">
-        <h4 class="subheader">Amanda McGovern</h4>
-        <p>I like CrossFit Interchange because the coaches and supporting members <strong>REALLY</strong> care about everyone. They do their best to work with all individuals to achieve their fitness and nutritional goals. No matter what skill levels you possess or what age you are, our gym is serious about helping you to get in better shape, but emphasizes having fun while doing so.</p>
-        <p><%= link_to 'Spin Class', group_classes_path %> | <%= link_to 'Class Schedule', group_classes_schedule_path %></p>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>

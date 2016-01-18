@@ -28,6 +28,8 @@ gem 'working_hours'
 gem 'puma'
 gem 'casein', '~>5.1.1'
 gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 
 group :development, :test do
