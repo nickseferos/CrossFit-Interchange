@@ -1,4 +1,4 @@
 class Workout < ActiveRecord::Base
-  validates :stength, presence: true
+  validates :strength, presence: true
   validates :conditioning, presence: true
 end

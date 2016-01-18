@@ -63,21 +63,21 @@
     <h2 class="text-center">
       <%= @wod_landing.date.strftime('%A, %b %d WOD') %>
     </h2>
-    <p>
+    <p class="text-center">
       <%= @wod_landing.info.html_safe %>
     </p>
     <hr>
     <p class="text-center">
       <strong>[STRENGTH]</strong>
     </p>
-    <p>
+    <p class="text-center">
       <%= @wod_landing.strength.html_safe %>
     </p>
     <br/>
     <p class="text-center">
       <strong>[CONDITIONING]</strong>
     </p>
-    <p>
+    <p class="text-center">
       <%= @wod_landing.conditioning.html_safe %>
     </p>
   </div>
