@@ -53,24 +53,33 @@
 <div class="row">
   <div class="small-10 small-centered columns">
     <h1 class="text-center">
-      <%= link_to 'Workout of the Day', :class => 'disabled' %>
+      <%= link_to 'Workout of the Day', wod_path, :class => 'disabled' %>
     </h1>
   </div>
 </div>
 
 <div class="row">
-  <div class="small-10 small-centered columns">
-    <h2 class="text-center">
-      <%== @title %>
-    </h2>
-  </div>
-</div>
-<div class="row">
   <div class="small-10 medium-6 small-centered columns">
-    <p class="text-center">  
-      <%= @body.html_safe %>
+    <h2 class="text-center">
+      <%= @wod_landing.date.strftime('%A, %b %d WOD') %>
+    </h2>
+    <p>
+      <%= @wod_landing.info.html_safe %>
+    </p>
+    <hr>
+    <p class="text-center">
+      [STRENGTH]
+    </p>
+    <p>
+      <%= @wod_landing.strength.html_safe %>
+    </p>
+    <br/>
+    <p class="text-center">
+      [CONDITIONING]
+    </p>
+    <p>
+      <%= @wod_landing.conditioning.html_safe %>
     </p>
   </div>
 </div>
-<br/>
 
