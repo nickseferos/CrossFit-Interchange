@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
 	def landing
    
-    @wod_landing = Workout.where("date <= ?", Date.today).last
+    @wod_landing = Workout.where("date <= ?", Date.today).order(:date).last
 	
 	end
 

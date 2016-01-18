@@ -1,10 +1,26 @@
 <% content_for :title, "Workout of the Day | CrossFit Interchange" %>
-<h1><center>
-  -Workout of the Day-
-</center></h1>
-
-<hr>
+<h1><center><strong>
+  Workout of the Day
+</strong></center></h1>
 
 <% @wods.each do |w| %>
-<%= w.date %>
+	<div class="small-12 medium-12 medium-centered columns">
+		<hr/>
+		<h3 class="text-center">
+			<%= w.date.strftime('%A, %b %d, %Y') %>
+		</h3>
+	</div>
+	<div class="small-12 medium-12 medium-centered  columns">
+		<p class="text-center"><%= w.info.html_safe %></p>
+	</div>
+	<div class="small-12 medium-6 columns">
+		<p><strong>[Strength]</strong></p>
+		<p><%= w.strength.html_safe %></p>
+	</div>
+	<div class="small-12 medium-6 columns"></div>
+		<p><strong>[Conditioning]</strong></p>
+		<p>
+			<%= w. conditioning.html_safe %>
+		</p>
 <% end %>
+<br>

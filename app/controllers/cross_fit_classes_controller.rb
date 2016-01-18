@@ -15,7 +15,7 @@ class CrossFitClassesController < ApplicationController
 	end
 
 	def wod
-	    @wods = Workout.where('date <= ?', Date.today).order(:date)
+	    @wods = Workout.where('date <= ?', Date.today).order(:date).reverse
 	end
 	
 end
