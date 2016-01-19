@@ -7,7 +7,7 @@ class GroupClassesController < ApplicationController
 	end
 
 	def gc_schedule
-		
+		@gc_schedule = GcSchedule.last
 	end
 
 	def gc_pricing

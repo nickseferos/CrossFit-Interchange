@@ -7,7 +7,7 @@ class CrossFitClassesController < ApplicationController
 	end
 
 	def cf_schedule
-
+		@cf_schedules = CfSchedule.last
 	end
 
 	def cf_pricing
