@@ -378,7 +378,6 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
-  json
   mail_form
   matenia-tumblr-api
   mini_magick
