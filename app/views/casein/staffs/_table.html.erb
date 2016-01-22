@@ -12,7 +12,7 @@
 	
 	<% staffs.each do |staff| %>
 		<tr>
-			<td><%= casein_table_cell_link staff.image, casein_staff_path(staff) %></td>
+			<td><%= casein_table_cell_link image_tag(staff.image), casein_staff_path(staff) %></td>
 			<td><%= casein_table_cell_link staff.name, casein_staff_path(staff) %></td>
 			<td><%= casein_table_cell_link staff.bio, casein_staff_path(staff) %></td>
 			<td class="delete">

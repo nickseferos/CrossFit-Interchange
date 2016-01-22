@@ -13,7 +13,7 @@
 	
 	<% workouts.each do |workout| %>
 		<tr>
-			<td><%= casein_table_cell_link workout.date, casein_workout_path(workout) %></td>
+			<td><%= casein_table_cell_link workout.date.strftime('%A, %b %d'), casein_workout_path(workout) %></td>
 			<td><%= casein_table_cell_link workout.info, casein_workout_path(workout) %></td>
 			<td><%= casein_table_cell_link workout.strength, casein_workout_path(workout) %></td>
 			<td><%= casein_table_cell_link workout.conditioning, casein_workout_path(workout) %></td>

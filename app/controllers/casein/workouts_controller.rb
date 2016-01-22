@@ -9,7 +9,8 @@ module Casein
   
     def index
       @casein_page_title = 'Workouts'
-  		@workouts = Workout.order(sort_order(:date)).paginate :page => params[:page]
+  		@workouts = Workout.page(params[:page]).order('created_at DESC')
+      # order(:date).paginate(:page => params[:page], :per_page => 6)
     end
   
     def show

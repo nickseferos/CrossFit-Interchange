@@ -6,7 +6,17 @@
 		<%= casein_file_field f, f.object, f.object, :image, :html => {:multipart => true} %>
 	</div>
 	<div class="col-lg-6">
+		<p><strong>Current Picture</strong></p>
+		<%= image_tag(@staff.image, :class => 'img-fluid') %>
+	</div>
+
+</div>
+<div class="row">
+	<div class="col-lg-6">
 		<%= casein_text_field f, f.object, :name %>
+	</div>
+	<div class="col-lg-6">
+		
 	</div>
 </div>
 
