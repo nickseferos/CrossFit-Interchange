@@ -253,6 +253,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    newrelic_rpm (3.13.1.300)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     nori (2.0.4)
@@ -381,6 +382,7 @@ DEPENDENCIES
   mail_form
   matenia-tumblr-api
   mini_magick
+  newrelic_rpm
   pg
   puma
   rails (= 4.2.3)
