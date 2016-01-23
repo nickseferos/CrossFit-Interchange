@@ -7,7 +7,8 @@ Rails.application.configure do
   config.serve_static_files =true
   config.static_cache_control ="public, max-age=14400"
   config.assets.js_compressor = :uglifier
-  config.assets.compile = false
+  config.assets.css_compressor = :sass
+  config.assets.compile = true
   config.assets.digest = true
   config.log_level = :debug
   config.i18n.fallbacks = true
