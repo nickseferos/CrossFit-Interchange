@@ -4,8 +4,8 @@ Rails.application.configure do
   config.eager_load = true
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.serve_static_files =true
-  config.static_cache_control ="public, max-age=14400"
+  config.serve_static_files = false
+  config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
   config.assets.compile = true
