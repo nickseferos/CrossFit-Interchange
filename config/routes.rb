@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 	#Casein routes
 	namespace :casein do
+		resources :blogs
 		resources :gc_schedules
 		resources :cf_schedules
 		resources :groupclasses
