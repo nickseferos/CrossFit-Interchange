@@ -1,0 +1,17 @@
+<% content_for :title, 'Jorunal | CrossFit Interchange' %>
+<% content_for :meta, 'Read our Journal' %>
+<div><h1 class="text-center">CrossFit Interchange Blog</h1></div>
+	<% @blogs.each do |b| %>
+    <div class="row">
+    	<div class="medium-4 columns">
+    		<%= link_to image_tag(b.image), page_path(b) %>
+    	</div>
+    	<div class="medium-8 columns">
+    		<h3><%= b.title %></h3><h6 class="subheader"> By <%= b.author %> on <%= b.date.strftime "%a, %b %d, %Y" %></h6>
+    		<p class="text-justify"><%== b.body.split[0...50].join(" ") %></p>
+    		<%= link_to "Continue Reading <i class='fi-arrow-right'></i>".html_safe, page_path(b) %>
+    	</div>
+    </div>
+  	<br>
+	<% end %>
+  <div class="small-10 columns small-centered"><%= will_paginate @blogs %></div>

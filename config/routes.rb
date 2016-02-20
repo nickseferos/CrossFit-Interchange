@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get 'free_trial' => 'pages#free_trial'
   get 'staff' => 'pages#staff'
   get 'fitness_challenge' => 'pages#fitness_challenge'
+  get 'blog' => 'pages#blog'
+  get 'blog/:id' => 'pages#blog_show'
 
   get 'crossfit_pricing' => 'cross_fit_classes#cf_pricing'
   get 'crossfit_schedule' => 'cross_fit_classes#cf_schedule'

@@ -29,4 +29,13 @@ class PagesController < ApplicationController
 	def staff
 	  @staff = Staff.all.order("created_at DESC").reverse
 	end
+
+	def blog
+		@blogs = Blog.where("date <= ?", Date.today).order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
+		@blog_last = Blog.where("date <= ?", Date.today).order(:date).last
+	end
+
+	def show
+		@blog = Blog.find params[:id]
+	end
 end
