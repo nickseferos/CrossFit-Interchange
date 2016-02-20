@@ -27,7 +27,8 @@ Rails.application.routes.draw do
   get 'staff' => 'pages#staff'
   get 'fitness_challenge' => 'pages#fitness_challenge'
   get 'blog' => 'pages#blog'
-  get 'blog/:id' => 'pages#blog_show'
+  get 'pages' => 'pages#blog'
+
 
   get 'crossfit_pricing' => 'cross_fit_classes#cf_pricing'
   get 'crossfit_schedule' => 'cross_fit_classes#cf_schedule'

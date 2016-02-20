@@ -11,5 +11,10 @@ test:
 
 production:
   adapter: postgresql
-  database: cfi_development
-  pool: 5
+  encoding: unicode
+  database: 
+  pool: 10
+  username: 
+  password: 
+  host: 
+  port: 5432
