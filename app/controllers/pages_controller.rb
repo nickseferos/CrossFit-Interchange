@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+	def index
+		redirect_to "/blog"
+	end
 
 	def landing
    
