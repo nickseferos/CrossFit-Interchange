@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :free_trials
+  resources :free_trials
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'

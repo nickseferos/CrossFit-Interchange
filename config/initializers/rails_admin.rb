@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
-
+  config.included_models = %w[ Admin Blog CfSchedule GcSchedule Staff Workout ]
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -27,9 +27,9 @@ RailsAdmin.config do |config|
     export
     bulk_delete
     show
-    edit
     delete
     show_in_app
+    edit
 
     ## With an audit adapter, you can add:
     # history_index
