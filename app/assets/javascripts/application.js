@@ -15,5 +15,6 @@
 //= require foundation
 //= require_tree .
 //= require ckeditor/init
+//= require social-share-button
 
 $(function(){ $(document).foundation(); });

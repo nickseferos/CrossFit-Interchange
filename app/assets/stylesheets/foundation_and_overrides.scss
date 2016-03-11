@@ -1,6 +1,6 @@
 @import 'foundation/functions';
-
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,200);
+$body-font-family: "Raleway", "Helvetica", Helvetica, Arial, sans-serif;
 $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
 
@@ -17,6 +17,12 @@ $include-html-global-classes: $include-html-classes;
 .footer {
 	position: relative;
 	background: #333;
+}
+.social-share-button-facebook {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(fonts/social-facebook) no-repeat;
 }
 
 @import 'foundation';

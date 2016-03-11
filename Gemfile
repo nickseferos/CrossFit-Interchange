@@ -24,6 +24,7 @@ gem 'fog'
 gem 'will_paginate', '~> 3.0.5'
 gem 'newrelic_rpm'
 gem 'savon'
+gem 'social-share-button'
 
 group :development, :test do
   gem 'byebug'

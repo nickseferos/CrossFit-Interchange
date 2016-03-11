@@ -1,6 +1,15 @@
 /*
  
- *=require_self
- *=require foundation_and_overrides
+  *=require_self
+  *=require foundation_and_overrides
+  *= require social-share-button
  
+
+.social-share-button-facebook {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(fonts/social-facebook) no-repeat;
+}
+
 */

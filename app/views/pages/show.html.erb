@@ -5,7 +5,7 @@
 		<h1><%= @blog.title %></h1>
 	</div>
 	<div class="small-12 columns">
-		<h5 class="subheader">By <%= @blog.author %> on <%= @blog.date.strftime "%b %d, %Y" %></h5>
+		<h5 class="subheader">By <%= @blog.author %> on <%= @blog.date.strftime "%b %d, %Y" %></h5>   <%= social_share_button_tag(@blog.title) %>
 	</div>
 	<div class="small-12 columns">
 		<%= image_tag(@blog.image) %>
@@ -18,28 +18,29 @@
 	<div class="small-1 columns"></div>
 </div>
 <div class="small-1 columns"></div>
-  <div class="small-10 small-centered columns">
-		<script>
-		/**
-		* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-		* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-		*/
-		/*
-		var disqus_config = function () {
-		this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-		};
-		*/
-		(function() { // DON'T EDIT BELOW THIS LINE
-		var d = document, s = d.createElement('script');
+  <div class="small-10 small-centered columns" >
+		<div id="disqus_thread"></div>
+			<script>
+			/**
+			* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+			*/
+			/*
+			var disqus_config = function () {
+			this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			*/
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
 
-		s.src = '//crossfitinterchange.disqus.com/embed.js';
+			s.src = '//crossfitinterchange.disqus.com/embed.js';
 
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </div>
   <div class="small-1 columns"></div>
 </div>
