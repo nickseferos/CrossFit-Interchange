@@ -4,4 +4,5 @@ class Blog < ActiveRecord::Base
   validates :author, presence: true
   validates :body, presence: true
   validates :image, presence: true
+  validates :date, presence: true
 end

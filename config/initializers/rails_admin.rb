@@ -35,4 +35,43 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Admin do
+
+  end
+
+  config.model Blog do
+    edit do
+      field :title
+      field :author
+      field :date, :date
+      field :body, :text
+      field :image, :carrierwave
+    end
+  end
+
+  config.model CfSchedule do
+    edit do
+
+    end
+  end
+
+  config.model GcSchedule do
+    edit do
+
+    end
+  end
+
+  config.model Staff do
+    edit do
+
+    end
+  end
+
+  config.model Workout do
+    edit do
+
+    end
+  end
+
 end
