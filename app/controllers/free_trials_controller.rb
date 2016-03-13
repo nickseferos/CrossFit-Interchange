@@ -28,6 +28,8 @@ class FreeTrialsController < ApplicationController
 
     respond_to do |format|
       if @free_trial.save
+        # Sends email to user when user is created.
+        FreetrialMailer.free_trial_email(@free_trial).deliver
         format.html { redirect_to @free_trial, notice: 'Free trial was successfully created.' }
         format.json { render :show, status: :created, location: @free_trial }
       else
