@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   resources :free_trials
-  resources :free_trials
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
@@ -18,7 +17,7 @@ Rails.application.routes.draw do
 
 
   resources :cross_fit_classes
-    post 'free_trial' => 'pages#free_trial'
+    post 'free_trials' => 'free_trials#new'
   resources :group_classes
   resources :pages
 
@@ -27,7 +26,7 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about_us'
   get 'child_care' => 'pages#child_care'
   get 'contact' => 'pages#contact'
-  get 'free_trial' => 'pages#free_trial'
+  get 'free_trial' => 'free_trials#new'
   get 'staff' => 'pages#staff'
   get 'fitness_challenge' => 'pages#fitness_challenge'
   get 'blog' => 'pages#blog'

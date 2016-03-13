@@ -4,7 +4,7 @@ class FreeTrialsController < ApplicationController
   # GET /free_trials
   # GET /free_trials.json
   def index
-    @free_trials = FreeTrial.all
+    @free_trial = FreeTrial.new
   end
 
   # GET /free_trials/1

@@ -1,14 +1,18 @@
-<%= simple_form_for(@free_trial) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+  <div class="small-10 medium-12 small-centererd medium-centered columns">
+    <%= simple_form_for(@free_trial) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
-  </div>
+      <div class="">
+        <%= f.input :first_name, class: 'expanded' %>
+        <%= f.input :last_name, class: 'expanded' %>
+        <%= f.input :email, class: 'expanded' %>
+        <%= f.input :phone, class: 'tel expanded' %>
+      </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+      <div class="form-actions">
+        <%= f.button :submit, class: 'button expand', placeholder: 'Start Your Free Trial' %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
