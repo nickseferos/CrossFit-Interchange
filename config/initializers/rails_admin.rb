@@ -45,32 +45,39 @@ RailsAdmin.config do |config|
       field :title
       field :author
       field :date, :date
-      field :body, :text
+      field :body, :froala
       field :image, :carrierwave
     end
   end
 
   config.model CfSchedule do
     edit do
-
+      field :mobile, :froala
+      field :desktop, :froala
     end
   end
 
   config.model GcSchedule do
     edit do
-
+      field :desktop, :froala
+      field :mobile, :froala
     end
   end
 
   config.model Staff do
     edit do
-
+      field :name
+      field :bio, :froala
+      field :image, :carrierwave
     end
   end
 
   config.model Workout do
     edit do
-
+      field :date
+      field :info, :froala
+      field :strength, :froala
+      field :conditioning, :froala
     end
   end
 

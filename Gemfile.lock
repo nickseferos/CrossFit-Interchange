@@ -362,6 +362,9 @@ GEM
     working_hours (1.1.2)
       activesupport (>= 3.2)
       tzinfo
+    wysiwyg-rails (1.2.8)
+      font-awesome-rails (>= 4.3.0.0)
+      railties (>= 3.2, < 5.0)
     xml-simple (1.1.5)
 
 PLATFORMS
@@ -398,6 +401,7 @@ DEPENDENCIES
   web-console (~> 2.0)
   will_paginate (~> 3.0.5)
   working_hours
+  wysiwyg-rails (~> 1.2.7)
 
 BUNDLED WITH
    1.10.3

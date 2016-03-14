@@ -28,6 +28,7 @@ gem 'social-share-button'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'devise'
 gem 'cancancan'
+gem "wysiwyg-rails", "~> 1.2.7"
 
 group :development, :test do
   gem 'byebug'
