@@ -6,8 +6,8 @@
       <div class="">
         <%= f.input :first_name, class: 'expanded' %>
         <%= f.input :last_name, class: 'expanded' %>
-        <%= f.input :email, class: 'expanded' %>
-        <%= f.input :phone, class: 'tel expanded' %>
+        <%= f.input :email, class: 'expanded', type: 'email' %>
+        <%= f.input :phone, class: 'tel expanded', placeholder: 'Optional', type: 'tel' %>
       </div>
 
       <div class="form-actions">

@@ -117,7 +117,12 @@
           </aside>
 
           <section class="main-section">
-
+            <% if flash[:notice] %>
+            <div data-alert class="alert-box success radius">
+              <%= notice %>
+              <a href="#" class="close">&times;</a>
+            </div>
+            <% end %>
             <%= yield %>
                 <footer class="footer" class="hide-for-small-only">
                   <div class="row">
@@ -157,7 +162,12 @@
     </div>
 <!-- Site Content -->
       <!-- Alerts/Notices -->
-      <div class="show-for-medium-up">
+      <% if flash[:notice] %>
+      <div data-alert class="alert-box success radius">
+        <%= notice %>
+        <a href="#" class="close">&times;</a>
+      </div>
+      <% end %>
       <%= yield %>
       </div>
 <div class="show-for-medium-up">
