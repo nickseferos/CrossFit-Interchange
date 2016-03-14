@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class FreetrialMailerTest < ActionMailer::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class FreetrialMailerPreview < ActionMailer::Preview
+	def free_trial_preview
+		FreeTrialMailer.sample_email(FreeTrial.first_name)
+	end
 end
