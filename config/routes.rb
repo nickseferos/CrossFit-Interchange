@@ -4,16 +4,7 @@ Rails.application.routes.draw do
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
-	#Casein routes
-	namespace :casein do
-		resources :blogs
-		resources :gc_schedules
-		resources :cf_schedules
-		resources :groupclasses
-		resources :group_classes
-		resources :staffs
-		resources :workouts
-	end
+	
 
 
   resources :cross_fit_classes
