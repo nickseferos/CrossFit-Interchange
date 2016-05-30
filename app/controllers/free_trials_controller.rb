@@ -65,12 +65,11 @@ class FreeTrialsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_free_trial
       @free_trial = FreeTrial.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def free_trial_params
       params.require(:free_trial).permit(:first_name, :last_name, :email, :phone)
     end
