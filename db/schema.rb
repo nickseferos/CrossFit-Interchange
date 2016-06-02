@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160531004537) do
+ActiveRecord::Schema.define(version: 20160602201616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,12 +141,35 @@ ActiveRecord::Schema.define(version: 20160531004537) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "phrasing_phrase_versions", force: :cascade do |t|
+    t.integer  "phrasing_phrase_id"
+    t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "phrasing_phrase_versions", ["phrasing_phrase_id"], name: "index_phrasing_phrase_versions_on_phrasing_phrase_id", using: :btree
+
+  create_table "phrasing_phrases", force: :cascade do |t|
+    t.string   "locale"
+    t.string   "key"
+    t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "staffs", force: :cascade do |t|
     t.string   "image"
     t.string   "name"
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "wicfs", force: :cascade do |t|
+    t.text     "copy"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "workouts", force: :cascade do |t|
