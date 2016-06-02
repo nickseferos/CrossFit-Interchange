@@ -71,6 +71,9 @@ GEM
     aws-sdk-resources (2.2.20)
       aws-sdk-core (= 2.2.20)
     bcrypt (3.1.11)
+    best_in_place (3.0.3)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -380,6 +383,7 @@ PLATFORMS
 DEPENDENCIES
   activeresource
   aws-sdk (~> 2)
+  best_in_place (~> 3.0.1)
   byebug
   cancancan
   carrierwave

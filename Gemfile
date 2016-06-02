@@ -29,6 +29,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'devise'
 gem 'cancancan'
 gem "wysiwyg-rails", "~> 1.2.7"
+gem "best_in_place", '~> 3.0.1'
 gem 'aws-sdk', '~> 2'
 
 group :development, :test do
