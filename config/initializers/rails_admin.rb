@@ -37,10 +37,20 @@ RailsAdmin.config do |config|
   end
 
   config.model Admin do
+    label 'Administrator'
+    navigation_label 'Admin'
+    weight 1
+  end
 
+  config.model FreeTrial do
+    label 'Free Trial'
+    navigation_label 'Admin'
+    weight 1
   end
 
   config.model Blog do
+    navigation_label 'Posts'
+    weight -1
     edit do
       field :title
       field :author
@@ -52,6 +62,8 @@ RailsAdmin.config do |config|
 
   config.model CfSchedule do
     label 'CrossFit Schedule'
+    navigation_label 'Content'
+    weight 2
     edit do
       field :mobile, :froala
       field :desktop, :froala
@@ -60,23 +72,31 @@ RailsAdmin.config do |config|
 
   config.model GcSchedule do
     label 'Group Class Schedule'
+    navigation_label 'Content'
+    weight 2
     edit do
       field :desktop, :froala
       field :mobile, :froala
     end
   end
 
-  # config.model GroupclassSchedule do
-  #   edit do
-  #     field :title
-  #     field :start
-  #     field :end
-  #     field :date
-  #     field :description, :froala
-  #   end
-  # end
+  config.model GroupclassSchedule do
+    label "Group Class Schedule2"
+    visible false
+    navigation_label 'Content'
+    weight 2
+    edit do
+      field :title
+      field :start
+      field :end
+      field :date
+      field :description, :froala
+    end
+  end
 
   config.model Staff do
+    navigation_label 'Admin'
+    weight 1
     edit do
       field :name
       field :bio, :froala
@@ -85,6 +105,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Workout do
+        navigation_label 'Posts'
+        weight -1
     edit do
       field :date
       field :info, :froala
