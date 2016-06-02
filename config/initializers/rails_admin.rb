@@ -51,6 +51,7 @@ RailsAdmin.config do |config|
   end
 
   config.model CfSchedule do
+    label 'CrossFit Schedule'
     edit do
       field :mobile, :froala
       field :desktop, :froala
@@ -58,21 +59,22 @@ RailsAdmin.config do |config|
   end
 
   config.model GcSchedule do
+    label 'Group Class Schedule'
     edit do
       field :desktop, :froala
       field :mobile, :froala
     end
   end
 
-  config.model GroupclassSchedule do
-    edit do
-      field :title
-      field :start
-      field :end
-      field :date
-      field :description, :froala
-    end
-  end
+  # config.model GroupclassSchedule do
+  #   edit do
+  #     field :title
+  #     field :start
+  #     field :end
+  #     field :date
+  #     field :description, :froala
+  #   end
+  # end
 
   config.model Staff do
     edit do
