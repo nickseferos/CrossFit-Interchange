@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'console/index'
+
+  get 'console/journal'
+
   resources :free_trials
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
