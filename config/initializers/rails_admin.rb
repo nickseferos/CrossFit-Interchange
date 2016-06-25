@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
-  config.included_models = %w[ Workout Blog FreeTrial CfSchedule GcSchedule GroupclassSchedule Staff Admin ]
+  config.included_models = %w[ Workout Blog FreeTrial CfSchedule GcSchedule GroupclassSchedule Staff Admin User ]
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -38,6 +38,12 @@ RailsAdmin.config do |config|
 
   config.model Admin do
     label 'Administrator'
+    navigation_label 'Admin'
+    weight 1
+  end
+
+  config.model User do
+    label 'User'
     navigation_label 'Admin'
     weight 1
   end
