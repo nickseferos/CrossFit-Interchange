@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   get 'console/journal'
 
   #Journal
-  resources :journal
+  resources :journals
 
   #Users
   devise_for :users
