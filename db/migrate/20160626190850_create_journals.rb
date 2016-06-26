@@ -3,7 +3,6 @@ class CreateJournals < ActiveRecord::Migration
     create_table :journals do |t|
       t.datetime :date
       t.string :workout
-      t.string :length
 
       t.timestamps null: false
     end
