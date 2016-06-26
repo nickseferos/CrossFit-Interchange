@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'journals/index'
+
   root 'pages#landing'
 
   #General
@@ -31,6 +33,9 @@ Rails.application.routes.draw do
   resources :console
   get 'console' => 'console#index'
   get 'console/journal'
+
+  #Journal
+  resources :journal
 
   #Users
   devise_for :users

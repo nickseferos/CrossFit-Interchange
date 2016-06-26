@@ -1,0 +1,9 @@
+<%= simple_form_for @journal do |f| %>
+	<%= f.error_notification %>
+
+	<%= f.input :date %>
+	<%= f.input :workout %>
+	<%= f.input :length %>
+
+	<%= f.button :submit %>
+<% end %>
