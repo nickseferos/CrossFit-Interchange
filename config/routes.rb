@@ -7,27 +7,28 @@ Rails.application.routes.draw do
   #General
   resources :pages
   get 'about' => 'pages#about_us'
-  get 'child_care' => 'pages#child_care'
+  get 'child-care' => 'pages#child_care'
   get 'contact' => 'pages#contact'
-  get 'free_trial' => 'free_trials#new'
+  get 'free-trial' => 'free_trials#new'
   get 'staff' => 'pages#staff'
-  get 'fitness_challenge' => 'pages#fitness_challenge'
+  get 'fitness-challenge' => 'pages#fitness_challenge'
   get 'blog' => 'pages#blog'
   get 'pages' => 'pages#blog'
 
   #CrossFit
   resources :cross_fit_classes
-    post 'free_trials' => 'free_trials#new'
-  get 'crossfit_pricing' => 'cross_fit_classes#cf_pricing'
-  get 'crossfit_schedule' => 'cross_fit_classes#cf_schedule'
+    post 'free-trials' => 'free_trials#new'
+  get 'crossfit-pricing' => 'cross_fit_classes#cf_pricing'
+  get 'crossfit-schedule' => 'cross_fit_classes#cf_schedule'
   get 'crossfit' => 'cross_fit_classes#wicf'
   get 'wod' => 'cross_fit_classes#wod'
 
   # Group Classes
-  resources :group_classes
-  get 'group_classes_pricing' => 'group_classes#gc_pricing'
-  get 'group_classes_schedule' => 'group_classes#gc_schedule'
-  get 'group_classes' => 'group_classes#index'
+  # resources :group_classes Commented out for new url structure
+  get 'group-classes' => 'group_classes#index'
+  get 'group-classes-pricing' => 'group_classes#gc_pricing'
+  get 'group-classes-schedule' => 'group_classes#gc_schedule'
+  get 'group-classes' => 'group_classes#index'
 
   #Console
   resources :console
@@ -42,6 +43,7 @@ Rails.application.routes.draw do
 
   #Admin
   resources :free_trials
+  get 'free-trials' => 'free_trials#index'
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
@@ -51,7 +53,15 @@ Rails.application.routes.draw do
   get '/500' => 'errors#internal_server_error'
 
 # Legacy patching from old site to new
-  get '*path' + '.html' => redirect('/')
-  get '/sitemap', :to => redirect('/sitemap.xml')
+  get '*path' + '.html' => redirect('/', status: 301)
+  get '/sitemap', :to => redirect('/sitemap.xml', status: 301)
+# Legacy patching from old underscore style links to new dash style links.
+  get 'crossfit_schedule', to: redirect('crossfit-schedule', status: 301)
+  get 'crossfit_pricing', to: redirect('crossfit-pricing', status: 301)
+  get 'group_classes', to: redirect('group-classes', status: 301)
+  get 'group_classes_schedule', to: redirect('group-classes-schedule', status: 301)
+  get 'group_classes_pricing', to: redirect('group-classes-pricing', status: 301)
+  get 'free_trials', to: redirect('free-trials', status: 301)
+
 
 end
