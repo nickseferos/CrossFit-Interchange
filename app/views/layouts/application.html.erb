@@ -31,7 +31,7 @@
 
     </script>
     <% end %>
-
+        <%= render partial: "pages/navigation", locals: { navigation: @pages } %>
         <div class="show-for-medium-up">
         <!-- Alerts/Notices -->
         <% if flash[:notice] %>
@@ -42,7 +42,7 @@
         <% end %>
         <%= yield %>
         </div>
-        <%= render partial: "pages/footer", locals: { footer: @pages} %>
+        <%= render partial: "pages/footer", locals: { footer: @pages } %>
 
     <script id="dsq-count-scr" src="//crossfitinterchange.disqus.com/count.js" async></script>
     </body>

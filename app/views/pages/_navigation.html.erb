@@ -1,129 +1,48 @@
-    <!-- Large screen nav bar -->
-     <div class="show-for-medium-up">
-      <nav class="top-bar" data-topbar >
-        <ul class="title-area">
-          <li class="name">
-            <h1>
-              <%= link_to image_tag("CFI_logo.png", :size => '40x45', :alt => 'CFI Logo'), root_path %>
-            </h1>
-          </li>
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+  <%= link_to "CrossFit Interchange", root_path, class: 'text-center' %>
+</div>
+
+<div class="top-bar" id="main-menu">
+  <div class="top-bar-left">
+    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+    <li><%= link_to 'CrossFit Interchange', root_path, class: 'bold menu-nav' %></li>
+      <li class="has-submenu">
+        <a href="#" class="menu-nav">CrossFit</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><%= link_to 'What Is CrossFit', crossfit_path, class: 'menu-nav' %></li>
+          <li><%= link_to 'Schedule', crossfit_schedule_path, class: 'menu-nav' %></li>
+          <li><%= link_to 'Pricing', crossfit_pricing_path, class: 'menu-nav' %></li>
         </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#" class="menu-nav">Group Classes</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><%= link_to 'Group Classes', group_classes_path, class: 'menu-nav' %></li>
+          <li><%= link_to 'Class Schedule', group_classes_schedule_path, class: 'menu-nav' %></li>
+          <li><%= link_to 'Class Pricing', group_classes_pricing_path, class: 'menu-nav' %></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#" class="menu-nav">About</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><%= link_to 'Staff', staff_path, class: 'menu-nav' %></li>
+          <li><%= link_to 'Contact Us', contact_path, class: 'menu-nav' %></li>
+        </ul>
+      </li>
+      <li><%= link_to 'Blog', blog_path, class: 'menu-nav' %></li>
+    </ul>
+  </div>
 
-        <section class="top-bar-section">
-          <ul class="left">
-
-            <li class="has-dropdown">
-              <%= link_to 'CrossFit', crossfit_path %>
-                <ul class="dropdown">
-                  <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
-                  <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
-                  <li><%= link_to 'Pricing', crossfit_pricing_path %></li>
-                </ul>
-            </li>
-            <li class="has-dropdown">
-              <%= link_to'Group Classes', group_classes_path %>
-                <ul class="dropdown">
-                  <li><%= link_to 'Group Classes', group_classes_path %></li>
-                  <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
-                  <li><%= link_to 'Class Pricing', group_classes_pricing_path %></li>
-                </ul>
-            </li>
-            <li class="has-dropdown">
-            <%= link_to 'About', contact_path %>
-            <ul class="dropdown">
-              <li><%= link_to 'Staff', staff_path %></li>
-              <li><%= link_to 'Contact Us', contact_path %></li>
-            </ul>
-            <li><%= link_to 'Blog', blog_path %></li>
-          </ul>
-
-          <!-- Left Nav Section -->
-          <ul class="right">
-            <li><%= link_to 'Free Trial', free_trials_path %></li>
-            <li><%= link_to 'Contact', contact_path %></li>
-            <li><%= link_to 'Log In', journals_path, class: 'button expand show-for-xxlarge-up' %></li>
-          </ul>
-        </section>
-      </nav>
-      </div>
-    <!-- Mobile/Small nav -->
-      <div class="show-for-small-only">
-        <div class="off-canvas-wrap" data-offcanvas>
-          <div class="inner-wrap">
-            <nav class="tab-bar">
-              <section class="middle tab-bar-section">
-                <h1 class="title"><%= link_to 'CrossFit Interchange', root_path %></h1>
-              </section>
-
-              <section class="right-small">
-                <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-              </section>
-            </nav>
-
-            <aside class="right-off-canvas-menu">
-              <ul class="off-canvas-list">
-                <li><%= link_to 'Home', root_path %><li>
-                <li><label>CrossFit</label></li>
-                  <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
-                  <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
-                  <li><%= link_to 'Pricing', crossfit_pricing_path %></li>
-                <li><label>Group Classes</label></li>
-                  <li><%= link_to 'Group Classes', group_classes_path %></li>
-                  <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
-                  <li><%= link_to 'Class Pricing', group_classes_pricing_path %></li>
-                <li><label>About</label></li>
-                  <li><%= link_to 'Blog', blog_path %></li>
-                  <li><%= link_to 'Staff', staff_path %></li>
-                  <li><%= link_to 'Contact Us', contact_path %></li>
-                <li><label></label></li>
-                  <li><%= link_to 'Free Trial', free_trials_path %></li>
-                  <li><%= link_to 'Home', root_path %><li>
-              </ul>
-
-            </aside>
-
-            <section class="main-section">
-              <% if flash[:notice] %>
-              <div data-alert class="alert-box success radius">
-                <%= notice %>
-                <a href="#" class="close">&times;</a>
-              </div>
-              <% end %>
-              <%= yield %>
-                  <footer class="footer" class="hide-for-small-only">
-                    <div class="row">
-                      <div class="small-12 medium-6 large-5 columns">
-                        <p class="logo"><i class="fi-shield"></i> CrossFit Interchange</p> 
-                        <p class="footer-links">
-                          <%= link_to 'Home', root_path %>
-                          <%= link_to 'CrossFit', crossfit_path %>
-                          <%= link_to 'Group Classes', group_classes_path %>
-                          <%= link_to 'About Us', about_path %>
-                          <%= link_to 'Contact', contact_path %>
-                        </p>
-                        <p class="copywrite">Copyright CrossFit Interchange © 2016</p>
-                      </div>
-                      <div class="small-12 medium-6 large-4 columns">
-                        <ul class="contact">
-                          <li><p class="foot-links"><a href="https://www.google.com/maps/place/324+Campus+Ln,+Fairfield,+CA+94534/@38.2311641,-122.125176,17z/data=!3m1!4b1!4m2!3m1!1s0x808513cdb30cc299:0x9be60b71d653c80a" target"_blank"><i class="fi-marker"></i>324 Campus Lane Suite E Fairfield, CA 94534</a></p></li>
-                          <li><p class="foot-links"><a href="tel:7072669066"><i class="fi-telephone"></i>707-266-9066</a></p></li>
-                          <li><p class="foot-links"><a href="mailto:info@crossfitinterchange.com"><i class="fi-mail"></i>info@crossfitinterchange.com</a></p></li>
-                        </ul>
-                      </div>
-                      <div class="small-12 medium-12 large-3 columns" ><div class="centerd">
-                        <a href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63" target="_blank" title="CrossFit Journal: The Performance-Based Lifestyle Resource"><img src="http://journal.crossfit.com/templates/images/white-125x63.png" width="125px" height="63px" alt="CrossFit Journal: The Performance-Based Lifestyle Resource" /></a>
-                        <ul class="inline-list social">
-                          <a href="fb://profile/1583831865237275"><i class="fi-social-facebook"></i></a>
-                          <a href="instagram://user?username=crossfit.interchange"><i class="fi-social-instagram"></i></a>
-                        </ul>
-                      </div></div>
-                    </div>
-                  </footer>
-            </section>
-
-          <a class="exit-off-canvas"></a>
-
-          </div>
-        </div>
-      </div>
-  <!-- Site Content -->
+  <div class="top-bar-right">
+    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+      <li class="has-submenu">
+    
+      </li>
+      <li><%= link_to 'Free Trial', free_trials_path, class: 'menu-nav' %></li>
+      <li><%= link_to 'Contact', contact_path, class: 'menu-nav' %></li>
+      <li><%= link_to 'Log In', journals_path, class: 'button expand show-for-xxlarge-up' %></li>
+    </ul>
+  </div>
+</div>

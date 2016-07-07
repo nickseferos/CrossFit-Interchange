@@ -45,12 +45,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,200);
 
 
-//$include-html-global-classes: $include-html-classes;
-
-//   $bg          : #EDEDED;
-
-//  $reveal-modal-bg: $bg;
-
 .footer {
   position: relative;
   background: #333;
@@ -74,6 +68,7 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
+$top-bar-bg: #333;
 $black: #0a0a0a;
 $white: #fefefe;
 $bg: #EDEDED;
@@ -311,7 +306,7 @@ $drilldown-background: $white;
 // ------------
 
 $dropdown-padding: 1rem;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-border: 1px solid $top-bar-bg;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
@@ -577,9 +572,15 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: $top-bar-bg;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
 
+.menu-nav {
+  color: $white;
+}
+.bold {
+  font-weight: 600;
+}
