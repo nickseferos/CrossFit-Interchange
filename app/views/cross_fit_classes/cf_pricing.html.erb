@@ -7,95 +7,114 @@
     <div class="small-6 large-centered columns"><h1 class="text-center">CrossFit Pricing</h1></div>
   </div>
 </section>
-
-
-<!-- Pricing table, normal situation -->
   <div class="price_header">
     <h1 class="text-center">CrossFit Pricing</h1>
   </div>
-  <div class="row"> 
-  <div class="medium-4 columns">
-     <ul class="pricing-table">
-       <li class="title">One Year Paid Monthly</li>
-       <li class="price">$120
-         <br><span>per month</span>
-         <hr>
-       </li>
-       <!-- <li class="bullet-item">Unlimited<span><br>classes per week</span></li> -->
-       <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-     </ul>
-   </div>
-   <div class="medium-4 columns">
-     <ul class="pricing-table recommended">
-         <li class="best"><span>Recommended</span></li>
-         <li class="title">One Year of Classes Paid Up Front</li>
-         <li class="price">$1,290
-         <br><span>per year</span>
-         <hr>
-         </li>
-         <!-- <li class="bullet-item">10<span> classes per week</span></li> -->
-         <li class="bullet-item">$150 savings!</li>
-         <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+<!-- Standard Pricing -->
+<div class="row">
+  <div class="column medium-4">
+    <ul class="pricing-table no-bullet text-center">
+      <li class="title">One Year Paid Monthly</li>
+      <li class="price">$120<span> per month</span></li>
+      <li class="description">Unlimited Classes!</li>
+      <li>All CrossFit Classes</li>
+      <li>All Group Classes</li>
+      <li>Great Community</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
+  </div>
+
+  <div class="column medium-4">
+    <ul class="pricing-table no-bullet text-center recommended">
+      <li class="best"><span>Best Deal</span></li>
+      <li class="title">One Year, Paid Up Front</li>
+      <li class="price">$1290<span> per year</span></li>
+      <li class="description">Absolutely Everything</li>
+      <li>All Classes, CrossFit &amp; Group Classes</li>
+      <li>Save $150 (It's like 5 weeks free)</li>
+      <li>Great Use of Your Tax Return</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
+  </div>
+
+  <div class="column medium-4">
+    <ul class="pricing-table no-bullet text-center">
+      <li class="title">Month-to-Month</li>
+      <li class="price">$140<span> per month</span></li>
+      <li class="description">A great way to get started</li>
+      <li>All Classes</li>
+      <li>No Contract, All the Fun</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+<!-- Special Pricing -->
+<p class="text-center"><a data-open="specialPricing">Military &amp; First Responders, Students, Seniors &amp; Families </a></p>
+<p class="text-center"><a data-open="dropinpunchpasspricing">Drop In &amp; Punch Pass </a></p>
+<!-- military -->
+<div class="large reveal" id="specialPricing" data-reveal>
+  <div class="row">
+    <div class="column medium-4">
+      <ul class="pricing-table no-bullet text-center">
+        <li class="title">One Year Paid Monthly</li>
+        <li>$100<span><br> per month military &amp; first responders</span></li>
+        <li>$100<span><br> per month family</span></li>
+        <li>$65<span><br> per month seniors</span></li>
+        <li>$50<span><br> per month students</span></li>
+        <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
       </ul>
-   </div>
-   <div class="medium-4 columns">
-      <ul class="pricing-table">
-        <li class="title">Month to Month</li>
-        <li class="price">$140
-          <br><span>per month</span>
-          <hr>
-        </li>
-        <!-- <li class="bullet-item">10<span> classes per week</span></li> -->
+    </div>
+
+    <div class="column medium-4">
+      <ul class="pricing-table no-bullet text-center recommended">
+        <li class="best"><span>Best Deal</span></li>
+        <li class="title">One Year, Paid Up Front</li>
+        <li>$1,080<span><br>per year military &amp; first responders</span></li>
+        <li>$780<span><br>per year seniors</span></li>
+        <li>$600<span><br>per year students</span></li>
+        <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+      </ul>
+    </div>
+
+    <div class="column medium-4">
+      <ul class="pricing-table no-bullet text-center">
+        <li class="title">Month-to-Month</li>
+        
+        <li>$120<span><br> per month military &amp; first responders</span></li>
+        <li>$120<span><br> per month family</span></li>
+        <li>$85<span><br> per month seniors</span></li>
+        <li>$75<span><br> per month students</span></li>
         <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
       </ul>
     </div>
   </div>
-<div class="price_footer">
-<p class="text-center">
-<a data-reveal-id="Modal">Military &amp; First Responders, Students, Seniors &amp; Families</a>
-<br><br>
-<%= link_to 'Punch Passes & Drop In', group_classes_pricing_path + '#punch_pass' %>
-</p>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
+<!-- dropin and punch pass -->
+<div class="large reveal" id="dropinpunchpasspricing" data-reveal>
+  <div class="row">
+    <div class="column medium-6">
+      <ul class="pricing-table no-bullet text-center">
+        <li class="title">Punch Pass</li>
+        <li class="price">$150<span> per 10 classes</span></li>
+        <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+      </ul>
+    </div>
 
-<!-- Special Modal -->
-  <div id="Modal" class="reveal-modal" data-reveal aria-labelledby="firstModalTitle" aria-hidden="true" role="dialog">
-    <div class="price_modal">
-      <h3 class="text-center">Military &amp; First Responder, Students, Seniors &amp; Famlies Pricing</h3>
+
+    <div class="column medium-6">
+      <ul class="pricing-table no-bullet text-center">
+        <li class="title">Drop In</li>
+        <li class="price">$20<span> per class</span></li>
+        <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+      </ul>
     </div>
-    <div class="row"> 
-    <div class="medium-4 columns">
-       <ul class="pricing-table">
-         <li class="title">One Year Paid Monthly</li>
-         <li class="bullet-item">$100<span><br> per month military &amp; first responders</span></li>
-         <li class="bullet-item">$100<span><br> per month family</span></li>
-         <li class="bullet-item">$65<span><br> per month seniors</span></li>
-         <li class="bullet-item">$50<span><br> per month students</span></li>
-         <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-       </ul>
-     </div>
-     <div class="medium-4 columns">
-       <ul class="pricing-table recommended">
-           <li class="best"><span>Recommended</span></li>
-           <li class="title">One Year of Classes Paid Up Front</li>
-           <li class="bullet-item">$1,080<span> per year military &amp; first responders</span></li>
-           <li class="bullet-item">$780<span> per year seniors</span></li>
-           <li class="bullet-item">$600<span> per year students</span></li>
-           <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-        </ul>
-     </div>
-     <div class="medium-4 columns">
-        <ul class="pricing-table">
-         <li class="title">Month to Month</li>
-         <li class="bullet-item">$120<span><br> per month military &amp; first responders</span></li>
-         <li class="bullet-item">$120<span><br> per month family</span></li>
-         <li class="bullet-item">$85<span><br> per month seniors</span></li>
-         <li class="bullet-item">$75<span><br> per month students</span></li>
-         <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-        </ul>
-      </div>
-    </div>
-    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
   </div>
-
-
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
