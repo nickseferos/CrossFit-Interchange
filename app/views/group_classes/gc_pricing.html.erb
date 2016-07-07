@@ -8,76 +8,67 @@
   </div>
 </section>
 
+<div class="price_header">
+  <h1 class="text-center">Group Classes Pricing</h1>
+</div>
+<!-- Standard Pricing -->
+<div class="row">
+  <div class="column medium-4">
+    <ul class="pricing-table no-bullet text-center">
+      <li class="title">Class Membership Paid Monthly</li>
+      <li class="price">$60<span> per month</span></li>
+      <li class="description">Unlimited Group Classes!</li>
+      <li>All Group Classes</li>
+      <li>Great Community</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
+  </div>
 
-<!-- Pricing table, normal situation -->
-  <div class="price_header">
-    <h1 class="text-center">Group Classes Pricing</h1>
+  <div class="column medium-4">
+    <ul class="pricing-table no-bullet text-center recommended">
+      <li class="best"><span>Best Deal</span></li>
+      <li class="title">One Year, Paid Up Front</li>
+      <li class="price">$600<span> per year</span></li>
+      <li class="description">Absolutely Everything Group Classes</li>
+      <li>All Group Classes</li>
+      <li>Save $120 (It's like 2 months free)</li>
+      <li>Great Use of Your Tax Return</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
   </div>
-  <div class="row"> 
-  <div class="medium-4 columns">
-     <ul class="pricing-table">
-       <li class="title">Class Membership Paid Monthly</li>
-       <li class="price">$60
-         <br><span>per month</span>
-         <hr>
-       </li>
-       <!-- <li class="bullet-item">Unlimited<span><br>classes per week</span></li> -->
-       <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-     </ul>
-   </div>
-   <div class="medium-4 columns">
-     <ul class="pricing-table recommended">
-         <li class="best"><span>Recommended</span></li>
-         <li class="title">One Year of Group Classes Paid Up Front</li>
-         <li class="price">$600
-         <br><span>per year</span>
-         <hr>
-         </li>
-         <!-- <li class="bullet-item">10<span> classes per week</span></li> -->
-         <li class="bullet-item">$120 savings!</li>
-         <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-      </ul>
-   </div>
-   <div class="medium-4 columns">
-      <ul class="pricing-table">
-        <li class="title">Family Membership</li>
-        <li class="price">$50
-          <br><span>per month</span>
-          <hr>
-        </li>
-        <!-- <li class="bullet-item">10<span> classes per week</span></li> -->
-        <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-      </ul>
-    </div>
+
+  <div class="column medium-4">
+    <ul class="pricing-table no-bullet text-center">
+      <li class="title">Family Membership</li>
+      <li class="price">$50<span> per month</span></li>
+      <li class="description">A great way to get started</li>
+      <li>All Classes</li>
+      <li>Get Fit Together!</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
   </div>
+</div>
+
 
 <!-- Punch Pass/dropin -->
-<a name="punch_pass"></a>
-  <div class="price_secondary">
-    <h1 class="text-center">Punch Pass &amp; Drop-In Pricing</h1>
+<div class="price_secondary">
+  <h1 class="text-center">Punch Pass &amp; Drop-In Pricing</h1>
+</div>
+<div class="row">
+  <div class="column medium-6">
+    <ul class="pricing-table no-bullet text-center">
+      <li class="title">Punch Pass</li>
+      <li class="price">$100<span> for 10 classes</span></li>
+      <li class="description">A great way to get started</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
   </div>
-  <div class="row"> 
-  <div class="medium-6 columns">
-     <ul class="pricing-table">
-       <li class="title">CrossFit</li>
-       <li class="price">$150
-         <br><span>for 10 classes</span>
-         <hr>
-       </li>
-       <li class="bullet-item">$20<span> for one class</span></li>
-       <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-     </ul>
-   </div>
-
-   <div class="medium-6 columns">
-      <ul class="pricing-table">
-        <li class="title">Group Classes</li>
-        <li class="price">$100
-          <br><span>for 10 classes</span>
-          <hr>
-        </li>
-        <li class="bullet-item">$15<span> for one class</span></li>
-        <li class="cta-button"><%= link_to 'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
-      </ul>
-    </div>
+  <div class="column medium-6">
+    <ul class="pricing-table no-bullet text-center">
+      <li class="title">Drop In</li>
+      <li class="price">$15<span> for 1 classe</span></li>
+      <li class="description">For those visiting</li>
+      <li class="cta-button"><%= link_to'Click for a Free Trial!', free_trials_path, :class => "button"  %></li>
+    </ul>
   </div>
+</div>
