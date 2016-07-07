@@ -1,0 +1,238 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,200);
+$body-font-family: "Raleway", "Helvetica", Helvetica, Arial, sans-serif;
+$include-html-classes: true;
+$include-html-global-classes: $include-html-classes;
+
+   $bg          : #EDEDED;
+
+// We use these as default colors throughout
+   $primary-color: #67762A;
+   $secondary-color: #e0e0e0;
+   $success-color: #67762A;
+   $body-bg: $bg;
+
+  $reveal-modal-bg: $bg;
+
+.footer {
+	position: relative;
+	background: #333;
+}
+
+@import 'foundation';
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag(source='favicon.ico') %>
+
+    <title><%=  yield(:title) || "CrossFit Interchange" %></title>
+    <meta name="description" content="<%= yield(:description) %>"/>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "#{yield(:css)}" %>
+    <%= stylesheet_link_tag    "footer.css" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application"%>
+    <%= javascript_include_tag "foundation.min.js" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+  <% if Rails.env == "production"  %>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-70752807-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <% end %>
+  <!-- Large screen nav bar -->
+   <div class="show-for-medium-up">
+    <nav class="top-bar" data-topbar >
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+          	<%= link_to image_tag("CFI_logo.png", :size => '40x45', :alt => 'CFI Logo'), root_path %>
+          </h1>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="left">
+
+          <li class="has-dropdown">
+            <%= link_to 'CrossFit', crossfit_path %>
+              <ul class="dropdown">
+                <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
+                <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
+                <li><%= link_to 'Pricing', crossfit_pricing_path %></li>
+              </ul>
+          </li>
+          <li class="has-dropdown">
+            <%= link_to'Group Classes', group_classes_path %>
+              <ul class="dropdown">
+                <li><%= link_to 'Group Classes', group_classes_path %></li>
+                <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
+                <li><%= link_to 'Class Pricing', group_classes_pricing_path %></li>
+              </ul>
+          </li>
+          <li class="has-dropdown">
+          <%= link_to 'About', contact_path %>
+          <ul class="dropdown">
+            <li><%= link_to 'Staff', staff_path %></li>
+            <li><%= link_to 'Contact Us', contact_path %></li>
+          </ul>
+          <li><%= link_to 'Blog', blog_path %></li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="right">
+          <li><%= link_to 'Free Trial', free_trials_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+          <li><%= link_to 'Log In', journals_path, class: 'button expand show-for-xxlarge-up' %></li>
+        </ul>
+      </section>
+    </nav>
+    </div>
+  <!-- Mobile/Small nav -->
+    <div class="show-for-small-only">
+      <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+          <nav class="tab-bar">
+            <section class="middle tab-bar-section">
+              <h1 class="title"><%= link_to 'CrossFit Interchange', root_path %></h1>
+            </section>
+
+            <section class="right-small">
+              <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+            </section>
+          </nav>
+
+          <aside class="right-off-canvas-menu">
+            <ul class="off-canvas-list">
+              <li><%= link_to 'Home', root_path %><li>
+              <li><label>CrossFit</label></li>
+                <li><%= link_to 'What Is CrossFit', crossfit_path %></li>
+                <li><%= link_to 'Schedule', crossfit_schedule_path %></li>
+                <li><%= link_to 'Pricing', crossfit_pricing_path %></li>
+              <li><label>Group Classes</label></li>
+                <li><%= link_to 'Group Classes', group_classes_path %></li>
+                <li><%= link_to 'Class Schedule', group_classes_schedule_path %></li>
+                <li><%= link_to 'Class Pricing', group_classes_pricing_path %></li>
+              <li><label>About</label></li>
+                <li><%= link_to 'Blog', blog_path %></li>
+                <li><%= link_to 'Staff', staff_path %></li>
+                <li><%= link_to 'Contact Us', contact_path %></li>
+              <li><label></label></li>
+                <li><%= link_to 'Free Trial', free_trials_path %></li>
+                <li><%= link_to 'Home', root_path %><li>
+            </ul>
+
+          </aside>
+
+          <section class="main-section">
+            <% if flash[:notice] %>
+            <div data-alert class="alert-box success radius">
+              <%= notice %>
+              <a href="#" class="close">&times;</a>
+            </div>
+            <% end %>
+            <%= yield %>
+                <footer class="footer" class="hide-for-small-only">
+                  <div class="row">
+                    <div class="small-12 medium-6 large-5 columns">
+                      <p class="logo"><i class="fi-shield"></i> CrossFit Interchange</p> 
+                      <p class="footer-links">
+                        <%= link_to 'Home', root_path %>
+                        <%= link_to 'CrossFit', crossfit_path %>
+                        <%= link_to 'Group Classes', group_classes_path %>
+                        <%= link_to 'About Us', about_path %>
+                        <%= link_to 'Contact', contact_path %>
+                      </p>
+                      <p class="copywrite">Copyright CrossFit Interchange © 2016</p>
+                    </div>
+                    <div class="small-12 medium-6 large-4 columns">
+                      <ul class="contact">
+                        <li><p class="foot-links"><a href="https://www.google.com/maps/place/324+Campus+Ln,+Fairfield,+CA+94534/@38.2311641,-122.125176,17z/data=!3m1!4b1!4m2!3m1!1s0x808513cdb30cc299:0x9be60b71d653c80a" target"_blank"><i class="fi-marker"></i>324 Campus Lane Suite E Fairfield, CA 94534</a></p></li>
+                        <li><p class="foot-links"><a href="tel:7072669066"><i class="fi-telephone"></i>707-266-9066</a></p></li>
+                        <li><p class="foot-links"><a href="mailto:info@crossfitinterchange.com"><i class="fi-mail"></i>info@crossfitinterchange.com</a></p></li>
+                      </ul>
+                    </div>
+                    <div class="small-12 medium-12 large-3 columns" ><div class="centerd">
+                      <a href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63" target="_blank" title="CrossFit Journal: The Performance-Based Lifestyle Resource"><img src="http://journal.crossfit.com/templates/images/white-125x63.png" width="125px" height="63px" alt="CrossFit Journal: The Performance-Based Lifestyle Resource" /></a>
+                      <ul class="inline-list social">
+                        <a href="fb://profile/1583831865237275"><i class="fi-social-facebook"></i></a>
+                        <a href="instagram://user?username=crossfit.interchange"><i class="fi-social-instagram"></i></a>
+                      </ul>
+                    </div></div>
+                  </div>
+                </footer>
+          </section>
+
+        <a class="exit-off-canvas"></a>
+
+        </div>
+      </div>
+    </div>
+<!-- Site Content -->
+      <div class="show-for-medium-up">
+      <!-- Alerts/Notices -->
+      <% if flash[:notice] %>
+      <div data-alert class="alert-box success radius">
+        <%= notice %>
+        <a href="#" class="close">&times;</a>
+      </div>
+      <% end %>
+      <%= yield %>
+      </div>
+<div class="show-for-medium-up">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
+    <footer class="footer" class="hide-for-small-only">
+  <div class="row">
+    <div class="small-12 medium-6 large-5 columns">
+      <p class="logo"><i class="fi-shield"></i> CrossFit Interchange</p> 
+      <p class="footer-links">
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'CrossFit', crossfit_path %>
+        <%= link_to 'Group Classes', group_classes_path %>
+        <%= link_to 'About Us', about_path %>
+        <%= link_to 'Contact', contact_path %>
+      </p>
+      <p class="copywrite">Copyright CrossFit Interchange © 2016</p>
+    </div>
+    <div class="small-12 medium-6 large-4 columns">
+      <ul class="contact">
+        <li><p class="foot-links"><a href="https://www.google.com/maps/place/324+Campus+Ln,+Fairfield,+CA+94534/@38.2311641,-122.125176,17z/data=!3m1!4b1!4m2!3m1!1s0x808513cdb30cc299:0x9be60b71d653c80a" target="_blank" ><i class="fi-marker"></i>324 Campus Lane Suite E Fairfield, CA 94534</a></p></li>
+        <li><p class="foot-links"><a href="#"><i class="fi-telephone"></i>707-266-9066</a></p></li>
+        <li><p class="foot-links"><a href="mailto:info@crossfitinterchange.com"><i class="fi-mail"></i>info@crossfitinterchange.com</a></p></li>
+      </ul>
+    </div>
+    <div class="small-12 medium-12 large-3 columns" ><div class="centerd">
+      <a href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63" target="_blank" title="CrossFit Journal: The Performance-Based Lifestyle Resource"><img src="http://journal.crossfit.com/templates/images/white-125x63.png" width="125px" height="63px" alt="CrossFit Journal: The Performance-Based Lifestyle Resource" /></a>
+      <ul class="inline-list social" itemtype="http://schema.org/FollowAction">
+        <a href="https://www.facebook.com/CFinterchange"><i class="fi-social-facebook"></i></a>
+        <a href="https://instagram.com/crossfit.interchange"><i class="fi-social-instagram"></i></a>
+<!--         <a href="#"><i class="fi-social-linkedin"></i></a>
+        <a href="#"><i class="fi-social-github"></i></a> -->
+      </ul>
+    </div></div>
+  </div>
+</footer>
+</div>
+
+  <script id="dsq-count-scr" src="//crossfitinterchange.disqus.com/count.js" async></script>
+  </body>
+</html>

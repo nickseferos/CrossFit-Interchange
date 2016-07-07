@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activeresource', require: 'active_resource'
-gem 'foundation-rails', '~> 5.5.2.1'
+gem 'foundation-rails'
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
