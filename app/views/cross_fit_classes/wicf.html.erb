@@ -69,18 +69,16 @@
 	</div>
 </div>
 </p>
-  <p class="text-center "> Come in before any of our classes to try them out and get started with a free trial today.</p>
+  <p class="text-center "> Come in before any of our classes to try them out and get started with a <%= link_to 'free trial', free_trials_path %> today.</p>
 </div>
 </div>
 <div class="row">
   <div class="small-12 medium-5 small-centered columns">
     <p class="text-center">
-      <div class="button-bar">
-        <ul class="button-group radius">
-          <li><%= link_to 'Class Schedule', crossfit_schedule_path, :class => "small button secondary" %></li>
-          <li><%= link_to 'Free Trial', free_trials_path, :class => "small button success" %></li>
-          <li><%= link_to 'Contact', contact_path, :class => "small button secondary" %></li>
-        </ul>
+      <div class="button-group expanded">
+        <%= link_to 'Class Schedule', crossfit_schedule_path, :class => "small button secondary" %>
+        <%= link_to 'Free Trial', free_trials_path, :class => "small button success" %>
+        <%= link_to 'Contact', contact_path, :class => "small button secondary" %>
       </div>
     </p>
   </div>

@@ -7,7 +7,7 @@
    .hero_index:before {
     content: '';
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     height: 80vh;
     top: 54px;
     right: 0;
