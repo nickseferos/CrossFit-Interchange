@@ -18,4 +18,5 @@
 
 //= require social-share-button
 
-$(function(){ $(document).foundation(); });
+$(document).foundation();
+
