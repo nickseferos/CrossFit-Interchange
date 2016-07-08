@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "#{yield(:css)}" %>
     <%= stylesheet_link_tag    "footer.css" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -46,4 +46,3 @@
     <script id="dsq-count-scr" src="//crossfitinterchange.disqus.com/count.js" async></script>
     </body>
   </html>
-  

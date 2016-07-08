@@ -18,7 +18,4 @@
 
 //= require social-share-button
 
-$(document).foundation();
-
-
 $(function(){ $(document).foundation(); });

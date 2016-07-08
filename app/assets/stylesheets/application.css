@@ -1,11 +1,8 @@
 /*
  
-  *=require_self
- *= require foundation_and_overrides
-
+  *= require_self
   *= require foundation_and_overrides
-
-  *=require foundation
+  *= require foundation
   *= require social-share-button
  
 
