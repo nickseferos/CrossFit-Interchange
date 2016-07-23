@@ -34,7 +34,7 @@ class FreeTrialsController < ApplicationController
         format.html { redirect_to root_path, notice: 'Free trial was successfully created.' }
         format.json { render :show, status: :created, location: @free_trial }
       else
-        format.html { render :new }
+        format.html { render :index }
         format.json { render json: @free_trial.errors, status: :unprocessable_entity }
       end
     end

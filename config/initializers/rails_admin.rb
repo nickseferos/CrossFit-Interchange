@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
-  config.included_models = %w[ Workout Blog FreeTrial CfSchedule GcSchedule GroupclassSchedule Staff Admin User ]
+  config.included_models = %w[ Workout Blog FreeTrial CfSchedule GcSchedule GroupclassSchedule Staff Admin User Groupclass]
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -34,6 +34,12 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+  
+  config.model Groupclass do
+    label 'Group Classes'
+    navigation_label 'Content'
+    weight 1
   end
 
   config.model Admin do

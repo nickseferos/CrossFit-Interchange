@@ -1,5 +1,5 @@
-<% content_for :title, "CrossFit Interchange | Love Getting Fit" %>
-<% content_for :description , "CrossFit Interchange is premiere location for CrossFit and Group classes in Green Valley and Fairfield, CA. Love Getting Fit." %>
+<% content_for :title, "CrossFit Interchange | Green Valley, Farifield & Cordelia" %>
+<% content_for :description , "CrossFit Interchange is the premiere location for CrossFit and Group classes in Green Valley, Cordelia and Fairfield, CA. Love Getting Fit." %>
 <% content_for :css, 'index.css' %>
 <section class="hero_index">
   <div class="row hero_text">
@@ -18,26 +18,26 @@
   <div class="small-12 medium-4 columns text-center">
   <%= link_to (image_tag "kb.png", :size => '80x80'), crossfit_path %>
     <dl class="text-justify">
-      <dt class="text-center">CrossFit is for Everyone</dt>
+      <dt class="text-center opensans">CrossFit is for Everyone</dt>
       <dd>CrossFit helps forge the athlete in you. Become stronger than you thought possible and change the way you look at yourself. 
       <blockquote>"Crossfit Interchange has changed the way I look at fitness." - Ron K. </blockquote>
       </dd>
-      <dt><%= link_to"Read the rest of Ron's story and learn more.", crossfit_path %></dt>
+      <dt><%= link_to "Read the rest of Ron's story and learn more.", crossfit_path, class: 'opensans' %></dt>
     </dl>
   </div>
   <div class="small-12 medium-4 columns text-center">
   <%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %>
     <dl class="text-justify">
-      <dt class="text-center">We love community</dt>
+      <dt class="text-center opensans">We love community</dt>
       <dd>Something amazing happens when we become a community, not just a gym. People are excited to see eachother, and see eachother achieve. Your fitness routine transforms from a routine into a lifestyle.</dd>
     </dl>
   </div>
   <div class="small-12 medium-4 columns text-center">
   <%= link_to (image_tag 'yoga.png', :size => '80x80'), group_classes_path %>
     <dl class="text-justify">
-      <dt class="text-center">Group classes galore</dt>
+      <dt class="text-center opensans">Group classes galore</dt>
       <dd>We offer yoga, spin classes, TRX, Barre &amp; more. Get yourself in shape one class at a time.</dd>
-      <dt><%= link_to "Learn more about group classes.", group_classes_path %></dt>
+      <dt><%= link_to "Learn more about group classes.", group_classes_path, class: 'opensans' %></dt>
     </dl>
   </div>
 </div>
@@ -53,17 +53,17 @@
 <div class="row">
   <div class="small-10 small-centered columns">
     <h1 class="text-center">
-      <%= link_to 'Workout of the Day', wod_path, :class => 'disabled' %>
+      <%= link_to 'Workout of the Day', wod_path, :class => 'opensans' %>
     </h1>
   </div>
 </div>
 
 <div class="row">
   <div class="small-10 medium-6 small-centered columns">
-    <h2 class="text-center">
+    <h2 class="text-center opensans">
       <%= @wod_landing.date.strftime('%A, %b %d WOD') %>
     </h2>
-    <p class="text-center">
+    <p class="text-center opensans">
       <%= @wod_landing.info.html_safe %>
     </p>
     <hr>
@@ -74,7 +74,7 @@
     <p class="text-center">
       <strong>[STRENGTH]</strong>
     </p>
-    <p class="text-center">
+    <p class="text-center opensans">
       <%= @wod_landing.strength.html_safe %>
     </p>
   </div>
@@ -82,7 +82,7 @@
     <p class="text-center">
       <strong>[CONDITIONING]</strong>
     </p>
-    <p class="text-center">
+    <p class="text-center opensans">
       <%= @wod_landing.conditioning.html_safe %>
     </p>
   </div>

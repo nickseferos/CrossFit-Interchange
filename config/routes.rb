@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about_us'
   get 'child-care' => 'pages#child_care'
   get 'contact' => 'pages#contact'
-  get 'free-trial' => 'free_trials#new'
+  get 'free_trial' => 'free_trials#new'
   get 'staff' => 'pages#staff'
   get 'fitness-challenge' => 'pages#fitness_challenge'
   get 'blog' => 'pages#blog'
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   #CrossFit
   resources :cross_fit_classes
-    post 'free-trials' => 'free_trials#new'
+    post 'free_trials' => 'free_trials#new'
   get 'crossfit-pricing' => 'cross_fit_classes#cf_pricing'
   get 'crossfit-schedule' => 'cross_fit_classes#cf_schedule'
   get 'crossfit' => 'cross_fit_classes#wicf'
@@ -43,7 +43,7 @@ Rails.application.routes.draw do
 
   #Admin
   resources :free_trials
-  get 'free-trials' => 'free_trials#index'
+  get 'free_trials' => 'free_trials#index'
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
@@ -61,7 +61,6 @@ Rails.application.routes.draw do
   get 'group_classes', to: redirect('group-classes', status: 301)
   get 'group_classes_schedule', to: redirect('group-classes-schedule', status: 301)
   get 'group_classes_pricing', to: redirect('group-classes-pricing', status: 301)
-  get 'free_trials', to: redirect('free-trials', status: 301)
 
 
 end
