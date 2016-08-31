@@ -9,10 +9,6 @@ class PagesController < ApplicationController
 	
 	end
 
-	def about_us
-		
-	end
-
 	def fitness_challenge
 		
 	end

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #General
   resources :pages
-  get 'about' => 'pages#about_us'
+  get 'about' => 'pages#staff'
   get 'child-care' => 'pages#child_care'
   get 'contact' => 'pages#contact'
   get 'free_trial' => 'free_trials#new'
