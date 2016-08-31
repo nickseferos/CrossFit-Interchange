@@ -6,7 +6,7 @@
     <%= favicon_link_tag(source='favicon.ico') %>
 
     <title><%=  yield(:title) || "CrossFit Interchange" %></title>
-    <meta name="description" content="<%= yield(:description) + 'Solano County, CA'%>"/>
+    <meta name="description" content="<%= yield(:description) %>"/>
 
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag    "#{yield(:css)}" %>
