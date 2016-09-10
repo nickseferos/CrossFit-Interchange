@@ -9,15 +9,18 @@ Rails.application.routes.draw do
   get 'about' => 'pages#staff'
   get 'child-care' => 'pages#child_care'
   get 'contact' => 'pages#contact'
-  get 'free_trial' => 'free_trials#new'
   get 'staff' => 'pages#staff'
   get 'fitness-challenge' => 'pages#fitness_challenge'
   get 'blog' => 'pages#blog'
   get 'pages' => 'pages#blog'
 
+  # FreeTrial
+  resources :free_trials
+  get 'free_trial' => 'free_trials#new'
+
   #CrossFit
   resources :cross_fit_classes
-    post 'free_trials' => 'free_trials#new'
+    # post 'free_trials' => 'free_trials#index'
   get 'crossfit-pricing' => 'cross_fit_classes#cf_pricing'
   get 'crossfit-schedule' => 'cross_fit_classes#cf_schedule'
   get 'crossfit' => 'cross_fit_classes#wicf'
@@ -42,8 +45,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   #Admin
-  resources :free_trials
-  get 'free_trials' => 'free_trials#index'
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
