@@ -13,7 +13,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mail_form'
 gem 'simple_form'
 gem 'crack', '~> 0.4.2'
-# gem 'casein', '~>5.1.1'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'

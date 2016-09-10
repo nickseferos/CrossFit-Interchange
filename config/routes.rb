@@ -46,7 +46,6 @@ Rails.application.routes.draw do
   get 'free_trials' => 'free_trials#index'
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount Ckeditor::Engine => '/ckeditor'
 
   #Errors
   get '/404' => 'errors#not_found'
