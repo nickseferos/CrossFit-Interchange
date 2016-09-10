@@ -5,7 +5,7 @@
   <div class="row hero_text">
     <div class="small-12 medium-5 medium-push-7 columns">
       <dl><dt class="gr-header">CrossFit Interchange</dt></dl>
-      <h1 class="center thin-header">Here's to a healthier you.</h1>
+      <h2 class="center thin-header">Here's to a healthier you.</h2>
       <%= link_to 'Try us out for free.', free_trials_path, class: 'button link-header text-right' %>
       <h6><%= link_to 'Learn more about CrossFit >', crossfit_path, :class => 'white-header' %></h6>
       <h6><%= link_to 'Learn more about Group Classes >', group_classes_path, :class => 'white-header' %></h6>
@@ -13,10 +13,17 @@
   </div>
 </section>
 <div class="row">
+  <div class="small-12 medium-10 columns text-center medium-centered">
+    <h1 class="text-center thin-subheader">CrossFit Interchange. The best gym in Green Valley, Farifield, Cordelia and Solano.</h1>
+  </div>
+</div>
+</div>
+<br/>
+<div class="row">
   <div class="small-12 medium-4 columns text-center">
   <%= link_to (image_tag "kb.png", :size => '80x80'), crossfit_path %>
     <dl class="text-justify">
-      <dt class="text-center opensans">CrossFit is for Everyone</dt>
+      <h5 class="text-center bold opensans">CrossFit is for Everyone</h5>
       <dd>CrossFit helps forge the athlete in you. Become stronger than you thought possible and change the way you look at yourself. 
       <blockquote>"Crossfit Interchange has changed the way I look at fitness." - Ron K. </blockquote>
       </dd>
@@ -26,14 +33,14 @@
   <div class="small-12 medium-4 columns text-center">
   <%= link_to (image_tag 'community.png', :size => '80x80'), group_classes_path %>
     <dl class="text-justify">
-      <dt class="text-center opensans">We love community</dt>
+      <h5 class="bold text-center opensans">We love community</h5>
       <dd>Something amazing happens when we become a community, not just a gym. People are excited to see eachother, and see eachother achieve. Your fitness routine transforms from a routine into a lifestyle.</dd>
     </dl>
   </div>
   <div class="small-12 medium-4 columns text-center">
   <%= link_to (image_tag 'yoga.png', :size => '80x80'), group_classes_path %>
     <dl class="text-justify">
-      <dt class="text-center opensans">Group classes galore</dt>
+      <h5 class="text-center bold opensans">Group classes galore</h5>
       <dd>We offer yoga, spin classes, TRX, Barre &amp; more. Get yourself in shape one class at a time.</dd>
       <dt><%= link_to "Learn more about group classes.", group_classes_path, class: 'opensans' %></dt>
     </dl>
