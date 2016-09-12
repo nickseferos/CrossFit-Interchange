@@ -5,4 +5,5 @@ class Workout < ActiveRecord::Base
 
   has_many :movements
   belongs_to :user
+  has_one :WoTime
 end
