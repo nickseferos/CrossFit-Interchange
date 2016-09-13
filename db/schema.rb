@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912195134) do
+ActiveRecord::Schema.define(version: 20160913002609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -180,8 +180,9 @@ ActiveRecord::Schema.define(version: 20160912195134) do
   end
 
   create_table "reps", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "movements_id"
   end
 
   create_table "staffs", force: :cascade do |t|
@@ -211,9 +212,12 @@ ActiveRecord::Schema.define(version: 20160912195134) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "weights", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "movements_id"
   end
+
+  add_index "weights", ["movements_id"], name: "index_movements_id", using: :btree
 
   create_table "wicfs", force: :cascade do |t|
     t.text     "copy"
@@ -222,8 +226,9 @@ ActiveRecord::Schema.define(version: 20160912195134) do
   end
 
   create_table "wo_times", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "workouts_id"
   end
 
   create_table "workouts", force: :cascade do |t|
@@ -233,6 +238,7 @@ ActiveRecord::Schema.define(version: 20160912195134) do
     t.text     "conditioning"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "users_id"
   end
 
 end
