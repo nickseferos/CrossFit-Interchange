@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'journals/index'
+    #Journal
+  resources :journals
+  constraints subdomain: 'journals' do
+    resources :journals
+    match '/' => "journals#index", via: :get
+  end
+  
+  #Admin
+  constraints subdomain: 'admin' do
+    devise_for :admins
+    mount RailsAdmin::Engine => '/', as: 'rails_admin'
+  end
 
   root 'pages#landing'
 
@@ -38,15 +49,9 @@ Rails.application.routes.draw do
   get 'console' => 'console#index'
   get 'console/journal'
 
-  #Journal
-  resources :journals
 
   #Users
   devise_for :users
-
-  #Admin
-  devise_for :admins
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   #Errors
   get '/404' => 'errors#not_found'
@@ -61,6 +66,7 @@ Rails.application.routes.draw do
   get 'group_classes', to: redirect('group-classes', status: 301)
   get 'group_classes_schedule', to: redirect('group-classes-schedule', status: 301)
   get 'group_classes_pricing', to: redirect('group-classes-pricing', status: 301)
+  get '/admin' => redirect { |status: 301| "http://admin.cfi.dev" }
 
 
 end
