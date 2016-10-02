@@ -26,6 +26,7 @@ gem 'cancancan'
 gem "wysiwyg-rails", "~> 1.2.7"
 gem "best_in_place", '~> 3.0.1'
 gem 'aws-sdk', '~> 2'
+gem 'chartkick'
 
 group :development, :test do
   gem 'byebug'

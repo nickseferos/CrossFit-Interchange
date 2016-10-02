@@ -13,5 +13,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( staff.css  )
 # Rails.application.config.assets.precompile += %w( contact.css )
 # Rails.application.config.assets.precompile += %w( fitness.css )
-Rails.application.config.assets.precompile += ['2016BodyCahllenge.png','kb.png', 'yoga.png', 'community.png', 'pricing.css', 'footer.css', 'cross_fit_classes.css', 'errors.css', 'group_classes.css', 'index.css', 'pages.css', 'staff.css', 'contact.css', 'fitness.css']
+Rails.application.config.assets.precompile += ['2016BodyCahllenge.png','kb.png', 'yoga.png', 'community.png', 'pricing.css', 'footer.css', 'cross_fit_classes.css', 'errors.css', 'group_classes.css', 'index.css', 'pages.css', 'staff.css', 'contact.css', 'fitness.css', 'journals.css']
 Rails.application.config.assets.precompile += %w(  )

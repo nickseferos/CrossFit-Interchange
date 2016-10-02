@@ -4,6 +4,8 @@ class JournalsController < ApplicationController
 	before_action :find_journal, only: [:show, :update, :edit, :destroy]
 
   def index
+    @wod_landing = Workout.where("date <= ?", Date.today).order(:date).last
+    @user = User
   end
 
   def new

@@ -1,5 +1,93 @@
-<div class="console">
-	
+<% content_for :title, "CrossFit Interchange Journal" %>
+<% content_for :description , "" %>
+<% content_for :css, 'journals.css' %>
+
+
+<div class="row ">
+	<!-- Menu -->
+	<div class="small-2 medium-1 float-right menu columns opensans">
+		<dt class="text-center">Hej, <%= @user.name %>!</dt>
+		<hr>
+		
+		<h3 class="text-center">
+			<%= link_to root_path do %>
+				<span data-tooltip aria-haspopup="true" class="has-tip" title="Dashboard"><i class="fi-home"></i></span>
+			<% end %>
+		</h3>
+		<hr>
+			<h2 class="text-center">
+			<%= link_to root_path do %>
+				<span data-tooltip aria-haspopup="true" class="has-tip" title="New Workout"><i class="fi-burst-new"></i></span>
+			<% end %>
+		</h2>
+		<hr>
+		<h3 class="text-center">
+			<%= link_to root_path do %>
+				<span data-tooltip aria-haspopup="true" class="has-tip" title="Personal Records"><i class="fi-trophy"></i></span>
+			<% end %>
+		</h3>
+		<hr>
+		<h3 class="text-center">
+			<%= link_to root_path do %>
+				<span data-tooltip aria-haspopup="true" class="has-tip" title="History"><i class="fi-graph-trend"></i></span>
+			<% end %>
+		</h3>
+		<hr>
+			<h3 class="text-center">
+			<%= link_to root_path do %>
+				<span data-tooltip aria-haspopup="true" class="has-tip" title="Settings"><i class="fi-wrench"></i></span>
+			<% end %>
+		</h3>
+		<hr>
+
+	</div>
+
+	<div class="small-10 medium-11 float-left columns">
+		<!-- WOD View -->
+		<div class="small-12 columns">
+			<div class="row">
+			  <div class="small-10 small-centered columns">
+			    <h2 class="text-center">
+			      <%= link_to 'Workout of the Day', wod_path, class: 'opensans' %>
+			    </h2>
+			  </div>
+			</div>
+
+			<div class="row" itemscope itemtype="http://health-lifesci.schema.org/ExercisePlan" >
+			  <div class="small-10 medium-6 small-centered columns">
+			    <h3 class="text-center opensans">
+			      <%= @wod_landing.date.strftime('%A, %b %d WOD') %>
+			    </h3>
+			    <p class="text-center opensans">
+			      <%= @wod_landing.info.html_safe %>
+			    </p>
+			    <hr>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="small-10 medium-6 small centered columns">
+			    <p class="text-center">
+			      <strong>[STRENGTH]</strong>
+			    </p>
+			    <p class="text-center opensans">
+			      <%= @wod_landing.strength.html_safe %>
+			    </p>
+			  </div>
+			  <div class="small-10 medium-6 small centered columns">
+			    <p class="text-center">
+			      <strong>[CONDITIONING]</strong>
+			    </p>
+			    <p class="text-center opensans">
+			      <%= @wod_landing.conditioning.html_safe %>
+			    </p>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Progress Graph -->
+		<div class="small-12 columns opensans">
+			<h4 class="text-center"> Your last workout</h4>
+			
+		</div>
+	</div>
 </div>
-<h1>Introducing Workout Journals!</h1>
-<p>This feature is still under development and will be published in the near future. Thank you for choosing CrossFit Interchange!</p>
