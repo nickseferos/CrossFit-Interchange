@@ -3,6 +3,12 @@ class PagesController < ApplicationController
 		redirect_to "/blog"
 	end
 
+    before_action :check_signed_in
+
+	def check_signed_in
+	  redirect_to subdomain: 'journals' if signed_in?
+	end
+
 	def landing
    
     @wod_landing = Workout.where("date <= ?", Date.today).order(:date).last
