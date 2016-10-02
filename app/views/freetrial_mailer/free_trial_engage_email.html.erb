@@ -47,7 +47,9 @@
 <tr>
 <td>
 <h1>Hello Team!</h1>
-<p class="lead">Today we had someone sign up for a free trial. Their details are avaliable on the admin section of CFI. An intorductory email has already been sent.</p>
+<p class="lead"><%= @free_trial.first_name %> just signed up for a free trial. Their details are below:</p>
+
+<p><%= @free_trial.first_name %> <%= @free_trial.last_name %><br> Email: <%= @free_trial.email %> <br> <%= @free_trial.phone %></p>
 </td>
 <td class="expander"></td>
 </tr>
