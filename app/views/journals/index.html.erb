@@ -5,42 +5,7 @@
 
 <div class="row ">
 	<!-- Menu -->
-	<div class="small-2 medium-1 float-right menu columns opensans">
-		<dt class="text-center">Hej, <%= @user.name %>!</dt>
-		<hr>
-		
-		<h3 class="text-center">
-			<%= link_to root_path do %>
-				<span data-tooltip aria-haspopup="true" class="has-tip" title="Dashboard"><i class="fi-home"></i></span>
-			<% end %>
-		</h3>
-		<hr>
-			<h2 class="text-center">
-			<%= link_to root_path do %>
-				<span data-tooltip aria-haspopup="true" class="has-tip" title="New Workout"><i class="fi-burst-new"></i></span>
-			<% end %>
-		</h2>
-		<hr>
-		<h3 class="text-center">
-			<%= link_to root_path do %>
-				<span data-tooltip aria-haspopup="true" class="has-tip" title="Personal Records"><i class="fi-trophy"></i></span>
-			<% end %>
-		</h3>
-		<hr>
-		<h3 class="text-center">
-			<%= link_to root_path do %>
-				<span data-tooltip aria-haspopup="true" class="has-tip" title="History"><i class="fi-graph-trend"></i></span>
-			<% end %>
-		</h3>
-		<hr>
-			<h3 class="text-center">
-			<%= link_to root_path do %>
-				<span data-tooltip aria-haspopup="true" class="has-tip" title="Settings"><i class="fi-wrench"></i></span>
-			<% end %>
-		</h3>
-		<hr>
-
-	</div>
+	<%= render 'menu' %>
 
 	<div class="small-10 medium-11 float-left columns">
 		<!-- WOD View -->
@@ -87,7 +52,7 @@
 		<!-- Progress Graph -->
 		<div class="small-12 columns opensans">
 			<h4 class="text-center"> Your last workout</h4>
-			
+
 		</div>
 	</div>
 </div>
