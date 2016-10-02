@@ -1,6 +1,6 @@
 class JournalsController < ApplicationController
 	
-	# before_filter :authenticate_user!
+	before_filter :authenticate_user!
 	before_action :find_journal, only: [:show, :update, :edit, :destroy]
 
   def index
