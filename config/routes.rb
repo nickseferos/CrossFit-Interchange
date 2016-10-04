@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   constraints subdomain: 'journals' do
     resources :journals
     match '/' => "journals#index", via: :get
+    get 'users/sign_out', to: redirect('http://cfi.dev')
   end
   
   #Admin
